@@ -47,7 +47,6 @@ def signin():
     resp = make_response(render_template("auth/signin.html", form = form), 200)
 
     if request.method == 'POST':
-        resp.headers["abc"] = request.get_data()
         print(request.headers, file = sys.stderr)
 
     return resp
