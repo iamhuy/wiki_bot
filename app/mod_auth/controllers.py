@@ -1,3 +1,7 @@
+from __future__ import print_function
+import json
+import sys
+
 # Import flask dependencies
 from flask import Blueprint, request, render_template, \
                   flash, g, session, redirect, url_for
@@ -43,6 +47,7 @@ def signin():
     resp = make_response(render_template("auth/signin.html", form = form), 200)
 
     if request.method == 'POST':
-        resp.headers["abc"] = 123
+        resp.headers["abc"] = request.get_data()
+        print(request.headers, file = sys.stderr)
 
     return resp
