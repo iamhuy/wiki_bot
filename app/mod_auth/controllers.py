@@ -47,6 +47,6 @@ def signin():
     resp = make_response(render_template("auth/signin.html", form = form), 200)
 
     if request.method == 'POST':
-        print(request.headers, file = sys.stderr)
+        print(request.get_json(), file = sys.stderr)
 
     return resp
