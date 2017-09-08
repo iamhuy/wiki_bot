@@ -4,7 +4,6 @@ click==6.7
 Flask==0.12.2
 Flask-SQLAlchemy==2.2
 Flask-WTF==0.14.2
-get==0.0.0
 gunicorn==19.7.1
 idna==2.6
 itsdangerous==0.24
