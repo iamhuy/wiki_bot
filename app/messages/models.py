@@ -13,16 +13,23 @@ class Base(db.Model):
                                            onupdate=db.func.current_timestamp())
 
 # Define a User model
-class User(Base):
+class Chat(Base):
 
-    __tablename__ = 'user'
+    __tablename__ = 'chat'
 
     # User Name
-    name    = db.Column(db.String(128),  nullable=False)
+    user_name    = db.Column(db.String(128),  nullable=False)
+    domain = db.Column(db.Integer)
+    direction = db.Column(db.Boolean)
+    question = db.Column(db.String(1000))
+    relation = db.Column(db.Integer)
+    step = db.Column(db.Integer)
 
     # New instance instantiation procedure
-    def __init__(self, name, email, password):
-        self.name     = name
+    def __init__(self, id, user_name):
+        self.id = id
+        self.user_name = user_name
+        self.step = 0
 
     def __repr__(self):
         return '<User %r>' % (self.name)
