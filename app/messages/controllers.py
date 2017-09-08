@@ -85,6 +85,10 @@ def answer(conversation, message_data):
 # Set the route and accepted methods
 @mod_messages.route('/messages', methods=['GET', 'POST'])
 def incoming_message():
+    resp = make_response(render_template("index.html"), 200)
+
+    if (request.method == 'GET'):
+        return resp
 
     message_data = request.get_json()
 
@@ -94,7 +98,7 @@ def incoming_message():
     user_name = message_data['message']['from']['first_name']
     # print(chat_id)
 
-    resp = make_response(render_template("index.html"), 200)
+
 
     conversation = Chat.query.get(chat_id)
 
@@ -103,7 +107,7 @@ def incoming_message():
 
     print (answer(conversation, message_data))
 
-    # if request.method == 'POST':
-    #     print(request.get_json(), file = sys.stderr)
+    if request.method == 'POST':
+        print(request.get_json(), file = sys.stderr)
 
     return resp
