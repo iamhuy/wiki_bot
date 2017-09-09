@@ -39,7 +39,7 @@ def extractRelation(message_data):
     try:
         text = message_data['message']['text']
         relation_number = int(text)
-        if (relation_number < 0 or domain_number > 16):
+        if (relation_number < 0 or relation_number > 16):
             print('Error: Invalid Relation number')
             return None
         return relation_number
