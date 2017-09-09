@@ -23,6 +23,41 @@ def create_conversation(chat_id, user_name):
     db.session.commit()
     return new_chat
 
+def extractDomain(message_data):
+    try:
+        text = message_data['message']['text']
+        domain_number = int(text)
+        if (domain_number < 0 or domain_number > 33):
+            print('Error: Invalid domain number')
+            return None
+        return domain_number
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def extractRelation(message_data):
+    try:
+        text = message_data['message']['text']
+        relation_number = int(text)
+        if (relation_number < 0 or domain_number > 16):
+            print('Error: Invalid Relation number')
+            return None
+        return relation_number
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def extractDirection(message_data):
+    try:
+        direction = message_data['message']['text'].lower()
+        if (direction != "yes" and direction != "no"):
+            print('Error: Invalid answer')
+            return None
+        return True if direction == "yes" else False
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
 def sendMessage(text, chat_id):
     url = 'https://api.telegram.org/bot382360568:AAGn2SWgtTdpafWd-g_dvVkIvZZeAOomB4w/sendMessage?chat_id={chat_id}&text={text}'
     response = requests.post(url.format(chat_id = chat_id, text = text)).json()
@@ -40,19 +75,39 @@ def answer(conversation, message_data):
 
 
     if (conversation.step == 1):
-        result = sendMessage("Do you want to ask a question ?", conversation.id)
-        conversation.step += 1
-        conversation.direction = True if random.randint(1,10) == 0 else False
+        domain_number = extractDomain(message_data)
+        if (domain_number == None):
+            conversation.step = 0
+            sendMessage("Your domain number is not valid.\nPlease type anything to start a new session", conversation.id)
+        else:
+            conversation.domain = domain_number
+            conversation.step += 1
+            result = sendMessage("Do you want to ask a question ?", conversation.id)
         db.session.commit()
         return result
 
     # Querying
-    if (conversation.direction == True):
-        if (conversation.step == 2):
-            result = sendMessage("Let's ask", conversation.id)
+
+    if (conversation.step == 2):
+        direction = extractDirection(message_data)
+        if (direction == None):
+            conversation.step = 0
+            conversation.direction = None
+            result = sendMessage("Your answer is not valid.\nPlease type anything to start a new session", conversation.id)
+        else:
+            conversation.direction = direction
             conversation.step += 1
-            db.session.commit()
-            return result
+            if (direction):
+                result = sendMessage("Ask me a question !",conversation.id)
+            else:
+                questionGenerator = "This is your question"
+                result = sendMessage(questionGenerator, conversation.id)
+
+
+        db.session.commit()
+        return result
+
+    if (conversation.direction == True):
 
         if (conversation.step == 3):
             result = sendMessage("What is the relation of the question ?", conversation.id)
@@ -61,18 +116,22 @@ def answer(conversation, message_data):
             return result
 
         if (conversation.step == 4):
-            result = sendMessage("This is the answer ! ", conversation.id)
-            conversation.step = 0
+            relation = extractRelation(message_data)
+
+            if (relation == None):
+                conversation.step = 0
+                result = sendMessage("Your relation number is not valid.\nPlease type anything to start a new session",
+                            conversation.id)
+            else:
+                conversation.relation = relation
+                conversation.step += 1
+                answerGenerator = "This is the answer!"
+                result = sendMessage(answerGenerator, conversation.id)
+
             db.session.commit()
             return result
 
     if (conversation.direction == False):
-        if (conversation.step == 2):
-            result = sendMessage("This the question for you", conversation.id)
-            conversation.step += 1
-            db.session.commit()
-            return result
-
         if (conversation.step == 3):
             result = sendMessage("I got the answer and will update the knowledge base", conversation.id)
             conversation.step = 0
