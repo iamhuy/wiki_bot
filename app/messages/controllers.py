@@ -11,12 +11,14 @@ from flask import Blueprint, request, render_template
 from flask import make_response
 
 from app import db
-from app.messages.utils import babelfy
+from app.messages.utils import *
 from app.messages.models import Chat, KBS, get_kbs_by_relation_and_c1
+from constants import  *
 
 
 # Define the blueprint: 'auth', set its url prefix: app.url/auth
 mod_messages = Blueprint('messages', __name__)
+
 def create_conversation(chat_id, user_name):
     new_chat = Chat(chat_id, user_name)
     db.session.add(new_chat)
@@ -25,24 +27,24 @@ def create_conversation(chat_id, user_name):
 
 def extractDomain(message_data):
     try:
-        text = message_data['message']['text']
-        domain_number = int(text)
-        if (domain_number < 0 or domain_number > 33):
-            print('Error: Invalid domain number')
+        domain = message_data['message']['text'].strip().lower()
+        distance, domain = pick_one(domain, list_domains)
+        if (distance > 2):
+            print('Error: Invalid domain')
             return None
-        return domain_number
+        return domain_to_num[domain]
     except Exception, e:
         print('Error:', str(e))
         return None
 
 def extractRelation(message_data):
     try:
-        text = message_data['message']['text']
-        relation_number = int(text)
-        if (relation_number < 0 or relation_number > 16):
-            print('Error: Invalid Relation number')
+        relation = message_data['message']['text'].strip().lower()
+        distance, relation = pick_one(relation, list_relations)
+        if (distance > 2):
+            print('Error: Invalid Relation')
             return None
-        return relation_number
+        return relation_to_num[relation]
     except Exception, e:
         print('Error:', str(e))
         return None
@@ -185,7 +187,7 @@ def answer(conversation, message_data):
         domain_number = extractDomain(message_data)
         if (domain_number == None):
             conversation.step = 0
-            sendMessage("Your domain number is not valid.\nPlease type anything to start a new session", conversation.id)
+            sendMessage("Your domain is not valid.\nPlease type anything to start a new session", conversation.id)
         else:
             conversation.domain = domain_number
             conversation.step += 1
@@ -232,7 +234,7 @@ def answer(conversation, message_data):
         if (conversation.step == 4):
             relation = extractRelation(message_data)
             if (relation == None):
-                result = sendMessage("Your relation number is not valid.\nPlease type anything to start a new session",
+                result = sendMessage("Your relation is not valid.\nPlease type anything to start a new session",
                             conversation.id)
             else:
                 conversation.relation = relation
