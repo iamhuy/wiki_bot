@@ -5,7 +5,7 @@ import json
 import gzip
 
 from StringIO import StringIO
-
+from models import *
 
 def babelfy(text, annotation_type):
     service_url = 'https://babelfy.io/v1/disambiguate'
@@ -42,7 +42,7 @@ def babelfy(text, annotation_type):
                     # new_tuple['id'] = result.get('babelSynsetID')
                     # new_tuple['score'] = result.get('score')
                     # new_tuple['text'] = text[charFragment.get('start') : charFragment.get('end') + 1]
-                    list_fragment.append(result)
+                    list_fragment.append(Segment.serialize(result))
 
     return list_fragment
 

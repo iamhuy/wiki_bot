@@ -12,7 +12,7 @@ from flask import make_response
 
 from app import db
 from app.messages.utils import *
-from app.messages.models import Chat, KBS, get_kbs_by_relation_and_c1
+from app.messages.models import *
 from constants import  *
 
 
@@ -85,38 +85,18 @@ def question_classify(question):
     return 0
 
 def segment_cmp(s1, s2):
-    left1 = s1['charFragment']['start']
-    left2 = s2['charFragment']['start']
-    right1 = s1['charFragment']['end']
-    right2 = s2['charFragment']['end']
 
-    if (left1 < left2 or (left1 == left2 and right1 > right2)):
+    if (s1.start < s2.start or (s1.start == s2.start and s1.end > s2.end)):
         return -1
-    if left1 == left2 and right1 == right2:
+    if s1.start == s2.start and s1.end == s2.end:
         return 0
     return 1
 
 def isOverlap(s1, s2):
-    left1 = s1['charFragment']['start']
-    left2 = s2['charFragment']['start']
-    right1 = s1['charFragment']['end']
-    right2 = s2['charFragment']['end']
-    if (left1 < left2 < right1 or left1 < right2 < right1):
+    if (s1.start < s2.start < s1.end or s1.start < s2.end < s1.end):
         return True
     return False
 
-def new_segment(start, end):
-    segment = {}
-    segment['charFragment'] = {}
-    segment['charFragment']['start'] = start
-    segment['charFragment']['end'] = end
-    segment['babelSynsetID'] = None
-    return segment
-
-def getText(text, segment):
-    start = segment['charFragment']['start']
-    end = segment['charFragment']['end']
-    return text[start:end+1]
 
 def pairing_elements(list_segments):
     list_segments = sorted(list_segments, cmp=segment_cmp)
@@ -128,47 +108,51 @@ def pairing_elements(list_segments):
             j = i + k
             # print(i, '     ', j)
             if not isOverlap(list_segments[i], list_segments[j]):
-                start = list_segments[i]['charFragment']['start']
-                end = list_segments[j]['charFragment']['end']
-                pairing_lists.append(new_segment(start, end))
+                start = list_segments[i].start
+                end = list_segments[j].end
+                pairing_lists.append(Segment(start,end))
     return pairing_lists
 
 def unique_list_segment(list_segments):
     new_list = []
     span_set = []
     for segment in list_segments:
-        start = segment['charFragment']['start']
-        end = segment['charFragment']['end']
+        start = segment.start
+        end = segment.end
         if (start, end) not in span_set:
             new_list.append(segment)
             span_set.append((start,end))
 
     return new_list
 
-def answer_generator(conversation, message_data):
+def answer_generator(conversation):
 
-    relation_num = conversation.relation
-    answer = "I do not know the answer !"
     question = conversation.question.strip()
-    print(question)
-    # list_names = babelfy(question, "NAMED_ENTITIES")
-    # list_concepts = babelfy(question, "CONCEPTS")
     list_names = babelfy(question, "ALL")
     list_names = list_names + pairing_elements(list_names)
-    # print conversation.relation
+    list_names = unique_list_segment(list_names)
+    question_type = question_classify(question)
 
-
+    if question_type == 1:
+        answer = "No"
+    else:
+        answer = "I do not know the answer !"
 
     for subject_candidate in list_names:
-        id =  subject_candidate['babelSynsetID']
-        start = subject_candidate['charFragment']['start']
-        end = subject_candidate['charFragment']['end']
-        text = question[start : end + 1]
-        print(id)
-        print(text)
-        answer_list =  get_kbs_by_relation_and_c1(conversation.relation, text, id)
+        text = question[subject_candidate.start : subject_candidate.end + 1]
+        answer_list =  get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId)
         if len(answer_list) != 0:
-            return answer_list[0]
+            # yes/no question
+            if question_type == 1:
+                for answer in answer_list:
+                    print(answer.c2)
+                    distance, (start, end) = substring_match(answer.c2, question)
+                    if distance <= 2:
+                        if not isOverlap(subject_candidate, Segment(start, end)):
+                            return "Yes"
+
+            else: # normal question
+                return answer_list[0].c2
 
     return answer
 
@@ -238,8 +222,7 @@ def answer(conversation, message_data):
                             conversation.id)
             else:
                 conversation.relation = relation
-                answer = answer_generator(conversation, message_data)
-                # answer = "This is the answer!"
+                answer = answer_generator(conversation)
                 result = sendMessage(answer, conversation.id)
 
             conversation.step = 0
@@ -260,28 +243,21 @@ def answer(conversation, message_data):
 @mod_messages.route('/messages', methods=['GET', 'POST'])
 def incoming_message():
     resp = make_response(render_template("index.html"), 200)
-    # list_segments = babelfy('BabelNet is both a multilingual encyclopedic dictionary and a semantic network', "ALL")
 
     if (request.method == 'GET'):
         return resp
 
     message_data = request.get_json()
-    
     chat_id = int(message_data['message']['chat']['id'])
-    user_id = int(message_data['message']['from']['id'])
     user_name = message_data['message']['from']['first_name']
-    text = message_data['message']['text']
-
     conversation = Chat.query.get(chat_id)
 
     if (conversation == None):
         conversation = create_conversation(chat_id, user_name)
-
-    # conversation.question = u"What is University of Cumbria in general?"
-    # conversation.relation = 10
-    # conversation.direction = True
-    # conversation.domain = 0
-    # conversation.step = 4
+    conversation.question = "Is Gladsaxehus an example of ruined castle ?"
+    conversation.step = 4
+    conversation.direction = True
+    conversation.domain = 1
 
     print (answer(conversation, message_data))
 

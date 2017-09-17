@@ -46,6 +46,22 @@ class KBS(Base):
     def __repr__(self):
         return self.c2
 
+class Segment:
+
+    def __init__(self, start = None, end = None, babelId = None, text = None):
+        self.start = start
+        self.end = end
+        self.babelId = babelId
+        self.text =  text
+
+    @staticmethod
+    def serialize(json):
+        segment = Segment()
+        segment.start = json['charFragment']['start']
+        segment.end = json['charFragment']['end']
+        segment.babelId = json['babelSynsetID']
+        return segment
+
 def get_kbs_by_relation_and_c1(relation, c1, c1_id):
     query = KBS.query.filter(db.and_(KBS.relation_num == relation))
     if c1_id != None:
