@@ -267,7 +267,6 @@ def incoming_message():
 
     message_data = request.get_json()
     
-    # print(message_data, file = sys.stderr)
     chat_id = int(message_data['message']['chat']['id'])
     user_id = int(message_data['message']['from']['id'])
     user_name = message_data['message']['from']['first_name']
