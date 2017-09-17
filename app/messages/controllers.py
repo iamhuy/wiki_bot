@@ -1,21 +1,19 @@
-from __future__ import print_function
-import json
-import sys
-import requests
-import re
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
-# Import flask dependencies
-from flask import Blueprint, request, render_template, \
-                  flash, g, session, redirect, url_for
+from __future__ import print_function
+
+import re
+import sys
+
+import requests
+from flask import Blueprint, request, render_template
 from flask import make_response
 
-# Import the database object from the main app module
 from app import db
+from app.messages.utils import babelfy
+from app.messages.models import Chat, KBS, get_kbs_by_relation_and_c1
 
-# Import module models (i.e. User)
-from app.messages.models import Chat
-
-from app.utils.messages import babelfy
 
 # Define the blueprint: 'auth', set its url prefix: app.url/auth
 mod_messages = Blueprint('messages', __name__)
@@ -60,6 +58,18 @@ def extractDirection(message_data):
         print('Error:', str(e))
         return None
 
+def extractQuestion(message_data):
+    try:
+        question = message_data['message']['text'].strip()
+        t = question_classify(question)
+        if t == 0:
+            print('Error: Invalid question')
+            return None
+        return question
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
 def sendMessage(text, chat_id):
     url = 'https://api.telegram.org/bot382360568:AAGn2SWgtTdpafWd-g_dvVkIvZZeAOomB4w/sendMessage?chat_id={chat_id}&text={text}'
     response = requests.post(url.format(chat_id = chat_id, text = text)).json()
@@ -68,7 +78,7 @@ def sendMessage(text, chat_id):
 def question_classify(question):
     if re.match('(is|are|was|were|have|has|had|do|does|did|will|shall|would)\s', question, re.IGNORECASE) != None:
         return 1
-    if re.match('(what|where|how|when|which|whom|why)\s', question, re.IGNORECASE) != None:
+    if re.match('(what|where|how|when|which|whom|why|who)\s', question, re.IGNORECASE) != None:
         return 2
     return 0
 
@@ -133,31 +143,30 @@ def unique_list_segment(list_segments):
 
     return new_list
 
-
 def answer_generator(conversation, message_data):
+
+    relation_num = conversation.relation
     answer = "I do not know the answer !"
-    try:
-        question = message_data['message']['text']
-    except Exception, e:
-        print('Error:', str(e))
-        return None
-
-    question = question.strip()
-    list_names = babelfy(question, "NAMED_ENTITIES")
-
-
-    list_concepts = babelfy(question, "CONCEPTS")
-
-
-    list_mixed = babelfy(question, "ALL")
+    question = conversation.question.strip()
+    print(question)
+    # list_names = babelfy(question, "NAMED_ENTITIES")
+    # list_concepts = babelfy(question, "CONCEPTS")
+    list_names = babelfy(question, "ALL")
+    list_names = list_names + pairing_elements(list_names)
+    # print conversation.relation
 
 
 
-    if question_classify(question) == 2:
-        list_names
-    else:
-
-
+    for subject_candidate in list_names:
+        id =  subject_candidate['babelSynsetID']
+        start = subject_candidate['charFragment']['start']
+        end = subject_candidate['charFragment']['end']
+        text = question[start : end + 1]
+        print(id)
+        print(text)
+        answer_list =  get_kbs_by_relation_and_c1(conversation.relation, text, id)
+        if len(answer_list) != 0:
+            return answer_list[0]
 
     return answer
 
@@ -206,27 +215,32 @@ def answer(conversation, message_data):
         return result
 
     if (conversation.direction == True):
-
         if (conversation.step == 3):
-            result = sendMessage("What is the relation of the question ?", conversation.id)
-            conversation.step += 1
+            question = extractQuestion(message_data)
+            if question == None:
+                conversation.step = 0
+                result = sendMessage("Your question is not valid.\nPlease type anything to start a new session",
+                                     conversation.id)
+            else:
+                conversation.question = question
+                result = sendMessage("What is the relation of the question ?", conversation.id)
+                conversation.step += 1
+
             db.session.commit()
             return result
 
         if (conversation.step == 4):
             relation = extractRelation(message_data)
             if (relation == None):
-                conversation.step = 0
                 result = sendMessage("Your relation number is not valid.\nPlease type anything to start a new session",
                             conversation.id)
             else:
                 conversation.relation = relation
-                conversation.step = 0
-
-                answer_generator()
-                answer = "This is the answer!"
+                answer = answer_generator(conversation, message_data)
+                # answer = "This is the answer!"
                 result = sendMessage(answer, conversation.id)
 
+            conversation.step = 0
             db.session.commit()
             return result
 
@@ -244,8 +258,7 @@ def answer(conversation, message_data):
 @mod_messages.route('/messages', methods=['GET', 'POST'])
 def incoming_message():
     resp = make_response(render_template("index.html"), 200)
-    list_segments = babelfy('BabelNet is both a multilingual encyclopedic dictionary and a semantic network', "ALL")
-
+    # list_segments = babelfy('BabelNet is both a multilingual encyclopedic dictionary and a semantic network', "ALL")
 
     if (request.method == 'GET'):
         return resp
@@ -262,6 +275,12 @@ def incoming_message():
 
     if (conversation == None):
         conversation = create_conversation(chat_id, user_name)
+
+    # conversation.question = u"What is University of Cumbria in general?"
+    # conversation.relation = 10
+    # conversation.direction = True
+    # conversation.domain = 0
+    # conversation.step = 4
 
     print (answer(conversation, message_data))
 

@@ -11,13 +11,11 @@ def babelfy(text, annotation_type):
 
     lang = 'EN'
     key  = '61dc9d2b-8bf8-434e-b3ec-08f32e523959'
-    annotationResource = "BN"
 
     params = {
         'text' : text,
         'lang' : lang,
         'key'  : key,
-        # 'annRes': annotationResource,
         'annType': annotation_type
     }
 
@@ -45,5 +43,4 @@ def babelfy(text, annotation_type):
                     # new_tuple['text'] = text[charFragment.get('start') : charFragment.get('end') + 1]
                     list_fragment.append(result)
 
-    print list_fragment
     return list_fragment
