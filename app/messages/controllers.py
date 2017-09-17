@@ -254,10 +254,10 @@ def incoming_message():
 
     if (conversation == None):
         conversation = create_conversation(chat_id, user_name)
-    conversation.question = "Is Gladsaxehus an example of ruined castle ?"
-    conversation.step = 4
-    conversation.direction = True
-    conversation.domain = 1
+    # conversation.question = "Is Gladsaxehus an example of ruined castle ?"
+    # conversation.step = 4
+    # conversation.direction = True
+    # conversation.domain = 1
 
     print (answer(conversation, message_data))
 
