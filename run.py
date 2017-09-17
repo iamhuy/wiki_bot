@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 from app import app
 import sys
-import editdistance
-from app.messages.utils import *
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
