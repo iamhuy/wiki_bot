@@ -42,6 +42,7 @@ class KBS(Base):
     relation = db.Column(db.String, nullable=False)
     relation_num = db.Column(db.Integer, nullable=False)
     domains = db.Column(db.String, nullable=False)
+    truth = db.Column(db.Boolean)
 
     def __repr__(self):
         return self.c2
@@ -62,15 +63,17 @@ class Segment:
         segment.babelId = json['babelSynsetID']
         return segment
 
-def get_kbs_by_relation_and_c1(relation, c1, c1_id, strict):
+def get_kbs_by_relation_and_c1(relation, c1, c1_id, truth, strict):
     query = KBS.query.filter(KBS.relation_num == relation)
-    if not strict:
-        if c1_id != None and c1 != None:
-            query = query.filter(db.or_(KBS.c1_id == c1_id, db.func.lower(KBS.c1) == db.func.lower(c1)))
+    if truth != None:
+        query = query.filter(KBS.truth == truth)
+
+    if c1_id != None and c1 != None and not strict:
+        query = query.filter(db.or_(KBS.c1_id == c1_id, db.func.lower(KBS.c1) == db.func.lower(c1)))
     else:
-            if c1 != None:
-                query = query.filter(db.func.lower(KBS.c1) == db.func.lower(c1))
-            if c1_id != None:
-                query = query.filter(KBS.c1_id == c1_id)
+        if c1 != None:
+            query = query.filter(db.func.lower(KBS.c1) == db.func.lower(c1))
+        if c1_id != None:
+            query = query.filter(KBS.c1_id == c1_id)
 
     return query.all()

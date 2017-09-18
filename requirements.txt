@@ -15,3 +15,4 @@ SQLAlchemy==1.1.13
 urllib3==1.22
 Werkzeug==0.12.2
 WTForms==2.1
+nltk==3.2.4

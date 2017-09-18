@@ -78,9 +78,9 @@ def sendMessage(text, chat_id):
     return True if response['ok'] == True else False
 
 def question_classify(question):
-    if re.match('(is|are|was|were|have|has|had|do|does|did|will|shall|would)\s', question, re.IGNORECASE) != None:
+    if re.match('(is|are|was|were|have|has|had|do|does|did|will|shall|would)\s', question.strip().lower(), re.IGNORECASE) != None:
         return 1
-    if re.match('(what|where|how|when|which|whom|why|who)\s', question, re.IGNORECASE) != None:
+    if re.match('(what|where|how|when|which|whom|why|who)\s', question.strip().lower(), re.IGNORECASE) != None:
         return 2
     return 0
 
@@ -135,36 +135,34 @@ def answer_generator(conversation):
     list_candidates = unique_list_segment(list_candidates)
     question_type = question_classify(question)
 
-    if question_type == 1:
-        answer = "No"
-    else:
-        answer = "I do not know the answer !"
+    answer = "I do not know the answer !"
 
     for subject_candidate in list_candidates:
         list_object_candidates = [question[i.start: i.end + 1] for i in list_candidates if not isOverlap(subject_candidate, i)]
         text = question[subject_candidate.start : subject_candidate.end + 1]
         if question_type == 1:
             # yes/no question
-            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, strict = True)
+            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, truth = None, strict = True)
             for ans in answer_list:
                 distance, c2 = pick_one(ans.c2, list_object_candidates)
                 if distance <= 2:
-                    return "Yes"
+                    return "Yes" if ans.truth else "No"
 
-            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, strict= False)
+            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, truth = None, strict= False)
             for ans in answer_list:
                 distance, c2 = pick_one(ans.c2, list_object_candidates)
                 if distance <= 2:
-                    return "Yes"
+                    return "Yes" if ans.truth else "No"
 
         else: # normal question
-            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId,
+            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, truth = True,
                                                      strict=True)
             if len(answer_list) == 0:
-                answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId,
+                answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, truth = True,
                                                      strict=False)
 
-            return answer_list[0].c2
+            if len(answer_list) != 0:
+                return answer_list[0].c2
 
     return answer
 
@@ -266,7 +264,8 @@ def incoming_message():
 
     if (conversation == None):
         conversation = create_conversation(chat_id, user_name)
-    # conversation.question = "Is Bar a specialization of a venue ?"
+    # conversation.question = "Was Narroways Hill a fraction of Four Seasons ?"
+    # conversation.question = "Was Narroways Hill a fraction of Four Seasons ?"
     # conversation.step = 4
     # conversation.direction = True
     # conversation.domain = 1
