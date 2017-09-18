@@ -93,9 +93,9 @@ def segment_cmp(s1, s2):
     return 1
 
 def isOverlap(s1, s2):
-    if (s1.start < s2.start < s1.end or s1.start < s2.end < s1.end):
-        return True
-    return False
+    if (s1.start >= s2.end or s2.start >= s1.end):
+        return False
+    return True
 
 
 def pairing_elements(list_segments):
@@ -128,9 +128,11 @@ def unique_list_segment(list_segments):
 def answer_generator(conversation):
 
     question = conversation.question.strip()
-    list_names = babelfy(question, "ALL")
-    list_names = list_names + pairing_elements(list_names)
-    list_names = unique_list_segment(list_names)
+    list_names = babelfy(question, "NAMED_ENTITIES")
+    list_concepts = babelfy(question, "CONCEPTS")
+    list_candidates = list_names + list_concepts
+    list_candidates = list_candidates + pairing_elements(list_candidates)
+    list_candidates = unique_list_segment(list_candidates)
     question_type = question_classify(question)
 
     if question_type == 1:
@@ -138,21 +140,31 @@ def answer_generator(conversation):
     else:
         answer = "I do not know the answer !"
 
-    for subject_candidate in list_names:
+    for subject_candidate in list_candidates:
+        list_object_candidates = [question[i.start: i.end + 1] for i in list_candidates if not isOverlap(subject_candidate, i)]
         text = question[subject_candidate.start : subject_candidate.end + 1]
-        answer_list =  get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId)
-        if len(answer_list) != 0:
+        if question_type == 1:
             # yes/no question
-            if question_type == 1:
-                for answer in answer_list:
-                    print(answer.c2)
-                    distance, (start, end) = substring_match(answer.c2, question)
-                    if distance <= 2:
-                        if not isOverlap(subject_candidate, Segment(start, end)):
-                            return "Yes"
+            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, strict = True)
+            for ans in answer_list:
+                distance, c2 = pick_one(ans.c2, list_object_candidates)
+                if distance <= 2:
+                    return "Yes"
 
-            else: # normal question
-                return answer_list[0].c2
+            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, strict= False)
+            for ans in answer_list:
+                distance, c2 = pick_one(ans.c2, list_object_candidates)
+                if distance <= 2:
+                    return "Yes"
+
+        else: # normal question
+            answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId,
+                                                     strict=True)
+            if len(answer_list) == 0:
+                answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId,
+                                                     strict=False)
+
+            return answer_list[0].c2
 
     return answer
 
@@ -254,7 +266,7 @@ def incoming_message():
 
     if (conversation == None):
         conversation = create_conversation(chat_id, user_name)
-    # conversation.question = "Is Gladsaxehus an example of ruined castle ?"
+    # conversation.question = "Is Bar a specialization of a venue ?"
     # conversation.step = 4
     # conversation.direction = True
     # conversation.domain = 1
