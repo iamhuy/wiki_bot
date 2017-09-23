@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from app import app
 import sys
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 

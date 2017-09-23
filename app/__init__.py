@@ -4,6 +4,8 @@ from flask import Flask, render_template
 # Import SQLAlchemy
 from flask_sqlalchemy import SQLAlchemy
 
+
+import nltk
 # Define the WSGI application object
 app = Flask(__name__)
 
@@ -30,3 +32,5 @@ app.register_blueprint(mod_messages)
 # Build the database:
 # This will create the database file using SQLAlchemy
 db.create_all()
+
+nltk.download('universal_tagset')

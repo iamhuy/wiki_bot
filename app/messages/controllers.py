@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
-
+import nltk
+from nltk.tag import pos_tag, map_tag
 import re
 import sys
 
@@ -10,7 +11,7 @@ import requests
 from flask import Blueprint, request, render_template
 from flask import make_response
 
-from app import db
+from app.intent import intent_predict
 from app.messages.utils import *
 from app.messages.models import *
 from constants import  *
@@ -125,15 +126,32 @@ def unique_list_segment(list_segments):
 
     return new_list
 
+def get_list_token_segments(sentence):
+    list_segments = []
+    tokens = nltk.word_tokenize(sentence)
+    posTagged = pos_tag(tokens, tagset='universal')
+    ix = 0
+    for tag in posTagged:
+        ix = sentence.find(tag[0], ix)
+        end = ix + len(tag[0])
+        if ix != 0 and tag[1] in ('NOUN', 'NUM', 'PRON', 'VERB', 'ADJ'):
+            list_segments.append(Segment(ix, end-1, None, tag[0]))
+        ix = end
+
+    return list_segments
+
 def answer_generator(conversation):
 
+
     question = conversation.question.strip()
+    question_type = question_classify(question)
+    list_token_segments = get_list_token_segments(question)
     list_names = babelfy(question, "NAMED_ENTITIES")
     list_concepts = babelfy(question, "CONCEPTS")
     list_candidates = list_names + list_concepts
-    list_candidates = list_candidates + pairing_elements(list_candidates)
+    list_candidates = list_candidates + pairing_elements(list_token_segments)
     list_candidates = unique_list_segment(list_candidates)
-    question_type = question_classify(question)
+
 
     answer = "I do not know the answer !"
 
@@ -144,12 +162,14 @@ def answer_generator(conversation):
             # yes/no question
             answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, truth = None, strict = True)
             for ans in answer_list:
+                if ans.c2 == None: continue
                 distance, c2 = pick_one(ans.c2, list_object_candidates)
                 if distance <= 2:
                     return "Yes" if ans.truth else "No"
 
             answer_list = get_kbs_by_relation_and_c1(conversation.relation, text, subject_candidate.babelId, truth = None, strict= False)
             for ans in answer_list:
+                if ans.c2 == None: continue
                 distance, c2 = pick_one(ans.c2, list_object_candidates)
                 if distance <= 2:
                     return "Yes" if ans.truth else "No"
@@ -219,8 +239,15 @@ def answer(conversation, message_data):
                                      conversation.id)
             else:
                 conversation.question = question
-                result = sendMessage("What is the relation of the question ?", conversation.id)
-                conversation.step += 1
+                relation = intent_predict(question)
+                if relation != "_UNK":
+                    conversation.relation = relation_to_num[relation.lower()]
+                    answer = answer_generator(conversation)
+                    result = sendMessage(answer, conversation.id)
+                    conversation.step = 0
+                else:
+                    result = sendMessage("What is the relation of the question ?", conversation.id)
+                    conversation.step += 1
 
             db.session.commit()
             return result
@@ -264,12 +291,11 @@ def incoming_message():
 
     if (conversation == None):
         conversation = create_conversation(chat_id, user_name)
-    # conversation.question = "Was Narroways Hill a fraction of Four Seasons ?"
-    # conversation.question = "Was Narroways Hill a fraction of Four Seasons ?"
+    # conversation.question = "Is Welch College placed in Nashville ?"
     # conversation.step = 4
     # conversation.direction = True
     # conversation.domain = 1
-
+    # print(intent_predict(conversation.question))
     print (answer(conversation, message_data))
 
     if request.method == 'POST':
