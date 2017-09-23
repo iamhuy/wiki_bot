@@ -76,7 +76,9 @@ def intent_predict(sentence):
                                                   True)
     _, step_loss, class_logits = step_outputs
 
-    tmp = [(index, i) for index, i in enumerate(class_logits[0])]
-    tmp = sorted(tmp, key = lambda element: element[1], reverse = True)
-    return rev_label_vocab[tmp[0][0]], rev_label_vocab[tmp[1][0]]
+    # tmp = [(index, i) for index, i in enumerate(class_logits[0])]
+    # tmp = sorted(tmp, key = lambda element: element[1], reverse = True)
+    # return rev_label_vocab[tmp[0][0]], rev_label_vocab[tmp[1][0]]
+    label_id = np.argmax(class_logits[0])
+    return rev_label_vocab[label_id]
 
