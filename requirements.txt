@@ -17,5 +17,3 @@ Werkzeug==0.12.2
 WTForms==2.1
 nltk==3.2.4
 tensorflow-tensorboard==0.1.6
-wheel==0.30.0
-https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.2.0-cp27-cp27mu-manylinux1_x86_64.whl
