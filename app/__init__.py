@@ -34,3 +34,4 @@ app.register_blueprint(mod_messages)
 db.create_all()
 
 nltk.download('universal_tagset')
+nltk.download('punkt')
