@@ -33,5 +33,3 @@ app.register_blueprint(mod_messages)
 # This will create the database file using SQLAlchemy
 db.create_all()
 
-nltk.download('universal_tagset')
-nltk.download('punkt')

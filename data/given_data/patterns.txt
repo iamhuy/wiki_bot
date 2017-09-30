@@ -1,0 +1,113 @@
+What color is [X] ?	color
+What is the color of [X] ?	color
+What color, texture or pattern is [X] ?	color
+What pattern does [X] have?	color
+Roses are red violets are blue, [X] is ? 	 color
+What's the color of [X] ? 	 color
+If I were to fill a container of [X], what color would that be? 	 color
+
+
+What is the purpose of [X] ?	purpose
+What purpose does [X] have?	purpose
+What is the purpose of using [X] ?	purpose
+What is [X] used for?	purpose
+What is the aim of using [X] ?	purpose
+What is the point of using [X] ?	purpose
+Why do we use [X] ? 	purpose
+
+
+What does [X] smell ?	smell
+
+
+What sound does [X] produce?	sound
+What does [X] sound like?	sound
+What sound does [X] make ?	sound
+What is the sound made by [X] ?	sound
+What is the sound of [X] ?	sound
+How does [X] sound ?	sound
+How does [X] sound like ?	sound
+What sound does [X] emit ?	sound
+What does [X] sound like?	sound
+
+
+What does [X] taste like?	taste
+What is [X]'s taste ?	taste
+What flavour has [X] ?	taste
+What is the taste of [X] ?	taste
+How does [X] taste ?	taste
+How does [X] taste like ?	taste
+If I taste like the taste of [X], what else could be like ? 	 taste
+What does [X] taste like?	taste
+What is the flavor of [X] ?	taste
+
+
+
+Where is [X] ?	place
+Where can [X] be found ?	place
+Where is [X] located ?	place
+
+
+
+What is the shape of [X] ?	shape
+What is the form of [X] ?	shape
+What shape does [X] have ?	shape
+What is the form of [X] ?	shape
+What shape is [X] ?	shape
+How does [X] look like ?	shape
+What form is [X] ?	shape
+
+
+What is the size of [X] ?	size
+What is the dimension of [X] ?	size
+How big is [X] ?	size
+What is size of [X] ?	size
+
+
+
+What is [X] similar to ?	similarity
+What is similar to [X] ?	similarity
+How does [X] look like ?	similarity
+What does [X] resemble to?	similarity
+If I were to see [X], what could i mistake it for? 	 similarity
+What can [X] be mistaken for? 	 similarity
+What does [X] look like? 	 similarity
+What's something similar to [X] ? 	 similarity
+
+
+
+
+What is [X] made of ?	material
+
+
+When does [X] occur ?	time
+When is [X] ?	time
+When does [X] held ?	time
+
+What can [X] do ?	activity
+What is [X] able to do ?	activity
+What [X] is able to do ?	activity
+If you were a [X], would you be able to do? 	 activity
+What do [X] can do? 	 activity
+Somewhere in the universe, there is a [X] doing what? 	 activity
+
+
+
+What is [X] ?	generalization
+What is the family of [X] ?	generalization
+What is the group of [X] ?	generalization
+
+
+How do you use [X] ?	how_to_use
+What do you use [X] for ?	how_to_use
+
+
+What's a part of [X] ? 	 part
+What's inside [X] ? 	 part
+
+
+
+What do [X] is able to do ?	activity
+What is an activity [X] do ?	activity
+
+
+What is an example of [X] ?	specialization

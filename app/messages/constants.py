@@ -1,18 +1,35 @@
 
 
+
+# Load relation list
 relation_to_num = dict()
-list_relations = ['sound', 'material', 'specialization', 'similarity',
-             'taste', 'activity', 'generalization', 'color',
-             'shape', 'part', 'place', 'purpose',
-             'time', 'how_to_use', 'smell', 'size']
-for i, relation in enumerate(list_relations):
-    relation_to_num[relation] = i
+list_relations = []
+f = open("data/given_data/relation_list.txt")
+content = f.readlines()
+for i, line in enumerate(content):
+    list_relations.append(line.strip().lower())
+    relation_to_num[line.strip().lower()] = i
 
 
+# Load domain list
 domain_to_num = dict()
 list_domains = []
-f = open("domain_list.txt")
+f = open("data/given_data/domain_list.txt")
 content = f.readlines()
 for i, line in enumerate(content):
     list_domains.append(line.strip().lower())
     domain_to_num[line.strip().lower()] = i
+
+# Load question templates
+question_templates = []
+for i in range(len(list_relations)):
+    question_templates.append([])
+
+f = open("data/given_data/patterns.txt")
+content = f.readlines()
+for line in content:
+    question = line.strip()
+    if len(question) > 0:
+        question = question.split('\t')
+        relation_num = relation_to_num[question[1].strip()]
+        question_templates[relation_num].append(question[0])

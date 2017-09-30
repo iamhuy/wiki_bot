@@ -1,0 +1,16 @@
+sound
+material
+specialization
+similarity
+taste
+activity
+generalization
+color
+shape
+part
+place
+purpose
+time
+how_to_use
+smell
+size

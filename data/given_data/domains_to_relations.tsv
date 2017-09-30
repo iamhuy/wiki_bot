@@ -1,0 +1,34 @@
+Transport and travel	time	shape	purpose	sound	place	generalization	size	how_to_use	specialization	part
+Food and drink	shape	smell	purpose	similarity	taste	color	generalization	size	specialization	part
+Culture and society	purpose	similarity	color	generalization	size	specialization	part
+Textile and clothing	shape	purpose	similarity	color	material	place	generalization	size	how_to_use	specialization	part
+Language and linguistics	purpose	similarity	sound	generalization	size	specialization	part
+Heraldry, honors, and vexillology	shape	purpose	similarity	color	generalization	size	specialization	part
+Mathematics	time	shape	purpose	similarity	generalization	size	how_to_use	specialization	part
+Biology	activity	shape	smell	similarity	taste	color	generalization	size	specialization	part
+History	similarity	time	place	generalization	size	specialization	part
+Computing	time	activity	purpose	similarity	place	generalization	size	how_to_use	specialization	part
+Religion, mysticism and mythology	time	activity	purpose	similarity	generalization	size	specialization	part
+Games and video games	time	purpose	similarity	sound	color	generalization	size	how_to_use	specialization	part
+Physics and astronomy	time	activity	shape	similarity	sound	color	place	generalization	size	specialization	part
+Education		generalization	how_to_use	specialization	part
+Politics and government	time	activity	purpose	similarity	color	place	generalization	size	specialization	part
+Meteorology	smell	sound	taste	color	generalization	size	specialization	part
+Law and crime	activity	purpose	time	place	generalization	size	specialization	part
+Philosophy and psychology	activity	similarity	time	generalization	size	specialization	part
+Literature and theatre	time	activity	purpose	similarity	sound	color	generalization	size	how_to_use	specialization	part
+Warfare and defense	purpose	time	material	place	generalization	size	how_to_use	specialization	part
+Royalty and nobility	shape	similarity	time	color	generalization	size	specialization	part
+Media	time	shape	similarity	sound	color	generalization	size	how_to_use	specialization	part
+Geography and places	shape	similarity	color	generalization	size	specialization	part
+Art, architecture, and archaeology	shape	time	color	material	generalization	size	how_to_use	specialization	part
+Health and medicine	time	activity	smell	purpose	taste	generalization	size	specialization	part
+Numismatics and currencies	time	shape	purpose	similarity	generalization	size	specialization	part
+Sport and recreation	time	activity	shape	purpose	color	place	generalization	size	how_to_use	specialization	part
+Animals	activity	shape	smell	purpose	similarity	sound	color	place	generalization	size	specialization	part
+Business, economics, and finance	activity	purpose	time	generalization	size	how_to_use	specialization	part
+Music	time	shape	purpose	similarity	sound	generalization	size	how_to_use	specialization	part
+Chemistry and mineralogy	shape	smell	purpose	similarity	taste	color	generalization	size	specialization	part
+Engineering and technology	time	shape	purpose	similarity	sound	material	generalization	how_to_use	specialization	part
+Geology and geophysics	time	shape	similarity	sound	color	generalization	size	specialization	part
+Farming	activity	smell	purpose	sound	taste	generalization	size	how_to_use	specialization	part

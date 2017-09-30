@@ -47,6 +47,29 @@ class KBS(Base):
     def __repr__(self):
         return self.c2
 
+class Concept(Base):
+    __tablename__ = 'concept'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    c1 = db.Column(db.String)
+    babel_id = db.Column(db.String)
+    relation_check = db.Column(db.String, nullable=False)
+    relation_count = db.Column(db.Integer, nullable=False)
+    domain = db.Column(db.Integer, nullable= False)
+
+    def add_relation(self, relation_num):
+        # print self.relation_check
+        if self.relation_check[relation_num] == '1':
+            self.relation_count -= 1
+            self.relation_check = self.relation_check[:relation_num] + '2' + self.relation_check[relation_num+1:]
+        else:
+            if self.relation_check[relation_num] == '0':
+                self.relation_check = self.relation_check[:relation_num] + '2' + self.relation_check[relation_num+1:]
+
+    # def __repr__(self):
+        # if self.c1 != None:
+        #     return self.c1
+        # return self.babel_id
+
 class Segment:
 
     def __init__(self, start = None, end = None, babelId = None, text = None):
@@ -77,3 +100,29 @@ def get_kbs_by_relation_and_c1(relation, c1, c1_id, truth, strict):
             query = query.filter(KBS.c1_id == c1_id)
 
     return query.all()
+
+
+def get_max_relation_value(domain_num, has_c1 = False):
+    query = db.session.query(db.func.max(Concept.relation_count)).filter(Concept.domain == domain_num)
+    if has_c1:
+        query = query.filter(Concept.c1 != None)
+
+    return query.one()[0]
+
+
+def get_concept_count(domain_num, relation_count, has_c1 = False):
+    query = db.session.query(Concept).filter(Concept.domain == domain_num, Concept.relation_count == relation_count)
+    if has_c1:
+        query = query.filter(Concept.c1 != None)
+
+    return query.count()
+
+
+def get_concept(domain_num, relation_count, has_c1 = False):
+    query = db.session.query(Concept).filter(Concept.domain == domain_num, Concept.relation_count == relation_count)
+    if has_c1:
+        query = query.filter(Concept.c1 != None)
+
+    query = query.order_by(db.func.random())
+
+    return query.first()

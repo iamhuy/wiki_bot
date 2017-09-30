@@ -3,9 +3,15 @@ import urllib2
 import urllib
 import json
 import gzip
+import random
 
 from StringIO import StringIO
 from models import *
+from constants import  *
+import nltk
+from nltk.tag import pos_tag, map_tag
+import re
+import requests
 
 def babelfy(text, annotation_type):
     service_url = 'https://babelfy.io/v1/disambiguate'
@@ -45,6 +51,40 @@ def babelfy(text, annotation_type):
                     list_fragment.append(Segment.serialize(result))
 
     return list_fragment
+
+
+def get_lemma(id):
+
+    from StringIO import StringIO
+
+    service_url = 'https://babelnet.io/v4/getSynset'
+
+    key = '61dc9d2b-8bf8-434e-b3ec-08f32e523959'
+
+    params = {
+        'id': id,
+        'key': key
+    }
+
+    url = service_url + '?' + urllib.urlencode(params)
+    request = urllib2.Request(url)
+    request.add_header('Accept-encoding', 'gzip')
+    response = urllib2.urlopen(request)
+
+    lemma_list = []
+
+    simple_lemma = "None"
+
+    if response.info().get('Content-Encoding') == 'gzip':
+        buf = StringIO(response.read())
+        f = gzip.GzipFile(fileobj=buf)
+        data = json.loads(f.read())
+        result = data['senses'][0]
+        simple_lemma = result.get('simpleLemma')
+        simple_lemma = re.sub(r'_', ' ', simple_lemma).lower().strip()
+
+    return simple_lemma
+
 
 def dl_distance(s1, s2, substitutions=[], deletions = [], insertions =[],  symetric=True,
                 returnMatrix=False, printMatrix=False, nonMatchingEnds=False, transposition=True,
@@ -212,9 +252,139 @@ def pick_N_substrings(s, l, num=3, **kw):
     '''
     return sorted(match_substrings(s, l, **kw))[:num]
 
-
 def pick_one_substring(s, l, **kw):
     try:
         return pick_N_substrings(s, l, 1, **kw)[0]
     except IndexError:
         return None
+
+def extractDomain(message_data):
+    try:
+        domain = message_data['message']['text'].strip().lower()
+        distance, domain = pick_one(domain, list_domains)
+        if (distance > 2):
+            print('Error: Invalid domain')
+            return None
+        return domain_to_num[domain]
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def extractRelation(message_data):
+    try:
+        relation = message_data['message']['text'].strip().lower()
+        distance, relation = pick_one(relation, list_relations)
+        if (distance > 2):
+            print('Error: Invalid Relation')
+            return None
+        return relation_to_num[relation]
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def extractDirection(message_data):
+    try:
+        direction = message_data['message']['text'].lower()
+        if (direction != "yes" and direction != "no"):
+            print('Error: Invalid answer')
+            return None
+        return True if direction == "yes" else False
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def extractQuestion(message_data):
+    try:
+        question = message_data['message']['text'].strip()
+        t = question_classify(question)
+        if t == 0:
+            print('Error: Invalid question')
+            return None
+        return question
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def create_conversation(chat_id, user_name):
+    new_chat = Chat(chat_id, user_name)
+    db.session.add(new_chat)
+    db.session.commit()
+    return new_chat
+
+def sendMessage(text, chat_id):
+    url = 'https://api.telegram.org/bot382360568:AAGn2SWgtTdpafWd-g_dvVkIvZZeAOomB4w/sendMessage?chat_id={chat_id}&text={text}'
+    response = requests.post(url.format(chat_id=chat_id, text=text)).json()
+    return True if response['ok'] == True else False
+
+def question_classify(question):
+    if re.match('(is|are|was|were|have|has|had|do|does|did|will|shall|would)\s', question.strip().lower(),
+                re.IGNORECASE) != None:
+        return 1
+    if re.match('(what|where|how|when|which|whom|why|who)\s', question.strip().lower(), re.IGNORECASE) != None:
+        return 2
+    return 0
+
+def segment_cmp(s1, s2):
+
+    if (s1.start < s2.start or (s1.start == s2.start and s1.end > s2.end)):
+        return -1
+    if s1.start == s2.start and s1.end == s2.end:
+        return 0
+    return 1
+
+def isOverlap(s1, s2):
+    if (s1.start >= s2.end or s2.start >= s1.end):
+        return False
+    return True
+
+def pairing_elements(list_segments):
+    list_segments = sorted(list_segments, cmp=segment_cmp)
+    n = len(list_segments)
+    pairing_lists = []
+    # print(n)
+    for k in reversed(range(1, n)):
+        for i in range(0, n - k):
+            j = i + k
+            # print(i, '     ', j)
+            if not isOverlap(list_segments[i], list_segments[j]):
+                start = list_segments[i].start
+                end = list_segments[j].end
+                pairing_lists.append(Segment(start, end))
+    return pairing_lists
+
+def unique_list_segment(list_segments):
+    new_list = []
+    span_set = []
+    for segment in list_segments:
+        start = segment.start
+        end = segment.end
+        if (start, end) not in span_set:
+            new_list.append(segment)
+            span_set.append((start, end))
+
+    return new_list
+
+def get_list_token_segments(sentence):
+    list_segments = []
+    tokens = nltk.word_tokenize(sentence)
+    posTagged = pos_tag(tokens, tagset='universal')
+    ix = 0
+    for tag in posTagged:
+        ix = sentence.find(tag[0], ix)
+        end = ix + len(tag[0])
+        if ix != 0 and tag[1] in ('NOUN', 'NUM', 'PRON', 'VERB', 'ADJ'):
+            list_segments.append(Segment(ix, end - 1, None, tag[0]))
+        ix = end
+
+    return list_segments
+
+def get_random_relation(relation_check):
+    res = []
+    for index in range(len(relation_check)):
+        if relation_check[index] == '1':
+            res.append(index)
+
+    return random.choice(res)
+
+def get_question_template(relation_num):
+    return random.choice(question_templates[relation_num])
