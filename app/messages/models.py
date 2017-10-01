@@ -23,6 +23,7 @@ class Chat(Base):
     step = db.Column(db.Integer)
     c1 = db.Column(db.String)
     c1_id = db.Column(db.String)
+    concept_id = db.Column(db.Integer)
 
     # New instance instantiation procedure
     def __init__(self, id, user_name):

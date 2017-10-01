@@ -6,7 +6,7 @@ import sys
 
 from flask import Blueprint, request, render_template
 from flask import make_response
-from app.intent import intent_predict
+# from app.intent import intent_predict
 from app.messages.utils import *
 from app.messages.models import *
 from constants import  *
@@ -50,6 +50,7 @@ def question_generator(conversation):
     conversation.relation = relation_num
     conversation.c1 = concept.c1
     conversation.c1_id = concept.babel_id
+    conversation.concept_id = concept.id
 
     return question
 
@@ -141,28 +142,28 @@ def answer(conversation, message_data):
         db.session.commit()
         return result
 
-    if (conversation.direction == True):
-        if (conversation.step == 3):
-            question = extract_question(message_data)
-            if question == None:
-                conversation.step = 0
-                result = sendMessage("Your question is not valid.\nPlease type anything to start a new session",
-                                     conversation.id)
-            else:
-                conversation.question = question
-                relation = intent_predict(question)
-                print (relation)
-                if relation != "_UNK":
-                    conversation.relation = relation_to_num[relation.lower()]
-                    answer = answer_generator(conversation)
-                    result = sendMessage(answer, conversation.id)
-                    conversation.step = 0
-                else:
-                    result = sendMessage("What is the relation of the question ?", conversation.id)
-                    conversation.step += 1
-
-            db.session.commit()
-            return result
+    # if (conversation.direction == True):
+    #     if (conversation.step == 3):
+    #         question = extract_question(message_data)
+    #         if question == None:
+    #             conversation.step = 0
+    #             result = sendMessage("Your question is not valid.\nPlease type anything to start a new session",
+    #                                  conversation.id)
+    #         else:
+    #             conversation.question = question
+    #             relation = intent_predict(question)
+    #             print (relation)
+    #             if relation != "_UNK":
+    #                 conversation.relation = relation_to_num[relation.lower()]
+    #                 answer = answer_generator(conversation)
+    #                 result = sendMessage(answer, conversation.id)
+    #                 conversation.step = 0
+    #             else:
+    #                 result = sendMessage("What is the relation of the question ?", conversation.id)
+    #                 conversation.step += 1
+    #
+    #         db.session.commit()
+    #         return result
 
         if (conversation.step == 4):
             relation = extract_relation(message_data)
@@ -187,6 +188,7 @@ def answer(conversation, message_data):
                 result = sendMessage("I got the answer. Thank you !", conversation.id)
                 conversation.answer = answer
                 update_kbs(conversation)
+                update_concept(conversation)
 
             conversation.step = 0
             db.session.commit()
@@ -207,7 +209,7 @@ def incoming_message():
     user_name = message_data['message']['from']['first_name']
     conversation = Chat.query.get(chat_id)
 
-    if (conversation == None):
+    if (conversation == None):  
         conversation = create_conversation(chat_id, user_name)
     # conversation.question = "Is Welch College placed in Nashville ?"
     # conversation.step = 4

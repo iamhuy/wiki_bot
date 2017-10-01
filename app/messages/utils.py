@@ -457,3 +457,10 @@ def update_kbs(conversation):
                      truth=True)
     db.session.add(new_record)
     update_centralized_kbs(conversation)
+
+
+def update_concept(conversation):
+    concept = Concept.query.get(conversation.concept_id)
+    concept.relation_count -= 1
+    relation_num = conversation.relation
+    concept.relation_check = concept.relation_check[:relation_num] + '2' + concept.relation_check[relation_num + 1:]
