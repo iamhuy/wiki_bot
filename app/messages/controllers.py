@@ -182,7 +182,7 @@ def answer(conversation, message_data):
         if (conversation.step == 3):
             answer = extract_answer(message_data)
             if answer == None:
-                result = sendMessage("Don't worry ! You will can answer it next time. ")
+                result = sendMessage("Don't worry ! You will can answer it next time. ", conversation.id)
             else:
                 result = sendMessage("I got the answer. Thank you !", conversation.id)
                 conversation.answer = answer
