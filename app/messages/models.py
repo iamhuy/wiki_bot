@@ -21,6 +21,8 @@ class Chat(Base):
     question = db.Column(db.String(1000))
     relation = db.Column(db.Integer)
     step = db.Column(db.Integer)
+    c1 = db.Column(db.String)
+    c1_id = db.Column(db.String)
 
     # New instance instantiation procedure
     def __init__(self, id, user_name):
@@ -64,11 +66,6 @@ class Concept(Base):
         else:
             if self.relation_check[relation_num] == '0':
                 self.relation_check = self.relation_check[:relation_num] + '2' + self.relation_check[relation_num+1:]
-
-    # def __repr__(self):
-        # if self.c1 != None:
-        #     return self.c1
-        # return self.babel_id
 
 class Segment:
 
@@ -126,3 +123,4 @@ def get_concept(domain_num, relation_count, has_c1 = False):
     query = query.order_by(db.func.random())
 
     return query.first()
+

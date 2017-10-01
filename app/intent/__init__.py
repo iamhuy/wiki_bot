@@ -13,7 +13,7 @@ tf.app.flags.DEFINE_integer("word_embedding_size", 128, "word embedding size")
 tf.app.flags.DEFINE_integer("num_layers", 1, "Number of layers in the model.")
 tf.app.flags.DEFINE_integer("in_vocab_size", 300000, "max vocab Size.")
 tf.app.flags.DEFINE_integer("out_vocab_size", 3, "max tag vocab Size.")
-tf.app.flags.DEFINE_string("train_dir", "intent_predict_model", "Training directory.")
+tf.app.flags.DEFINE_string("data_dir", "data", "Training directory.")
 tf.app.flags.DEFINE_boolean("use_attention", True,
                             "Use attention based RNN")
 tf.app.flags.DEFINE_float("dropout_keep_prob", 0.5,
@@ -55,13 +55,13 @@ with tf.variable_scope("model", reuse=None):
         bidirectional_rnn=FLAGS.bidirectional_rnn,
         task=task)
 
-ckpt = tf.train.get_checkpoint_state(FLAGS.train_dir)
+ckpt = tf.train.get_checkpoint_state(FLAGS.data_dir + '/intent_predict_model')
 if ckpt:
     print("Reading model parameters from %s" % ckpt.model_checkpoint_path)
     model_test.saver.restore(sess, ckpt.model_checkpoint_path)
 
-vocab, rev_vocab = data_utils.initialize_vocab(FLAGS.train_dir + '/vocabulary/' + 'in_vocab_300000.txt')
-label_vocab, rev_label_vocab = data_utils.initialize_vocab(FLAGS.train_dir + '/vocabulary/' + 'label.txt')
+vocab, rev_vocab = data_utils.initialize_vocab(FLAGS.data_dir + '/vocabulary/' + 'in_vocab_300000.txt')
+label_vocab, rev_label_vocab = data_utils.initialize_vocab(FLAGS.data_dir + '/vocabulary/' + 'label.txt')
 
 def intent_predict(sentence):
     tokens = data_utils.naive_tokenizer(sentence.strip())

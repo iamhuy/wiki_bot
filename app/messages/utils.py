@@ -55,8 +55,6 @@ def babelfy(text, annotation_type):
 
 def get_lemma(id):
 
-    from StringIO import StringIO
-
     service_url = 'https://babelnet.io/v4/getSynset'
 
     key = '61dc9d2b-8bf8-434e-b3ec-08f32e523959'
@@ -71,8 +69,6 @@ def get_lemma(id):
     request.add_header('Accept-encoding', 'gzip')
     response = urllib2.urlopen(request)
 
-    lemma_list = []
-
     simple_lemma = "None"
 
     if response.info().get('Content-Encoding') == 'gzip':
@@ -81,9 +77,33 @@ def get_lemma(id):
         data = json.loads(f.read())
         result = data['senses'][0]
         simple_lemma = result.get('simpleLemma')
-        simple_lemma = re.sub(r'_', ' ', simple_lemma).lower().strip()
+        simple_lemma = re.sub(r'_', ' ', simple_lemma)  .strip()
 
     return simple_lemma
+
+def update_centralized_kbs(conversation):
+
+    service_url = 'http://151.100.179.26:8080/KnowledgeBaseServer/rest-api/add_item_test'
+
+    key = '61dc9d2b-8bf8-434e-b3ec-08f32e523959'
+
+    params = {
+        'key': key
+    }
+
+    data = {}
+    data['question'] = conversation.question
+    data['answer'] = conversation.answer
+    data['relation'] = list_relations[conversation.relation].upper()
+    data['context'] = ""
+    data['domains'] = [list_domains[conversation.domain]]
+    data['c1'] = conversation.c1 + ("" if conversation.c1_id == None else "::" + conversation.c1_id)
+    data['c2'] = conversation.answer
+
+    url = service_url + '?' + urllib.urlencode(params)
+    request = urllib2.Request(url)
+    request.add_data(json.dumps(data))
+    urllib2.urlopen(request)
 
 
 def dl_distance(s1, s2, substitutions=[], deletions = [], insertions =[],  symetric=True,
@@ -258,7 +278,15 @@ def pick_one_substring(s, l, **kw):
     except IndexError:
         return None
 
-def extractDomain(message_data):
+def extract_answer(message_data):
+    try:
+        answer = message_data['message']['text'].lower()
+        return answer if answer != "no" else None
+    except Exception, e:
+        print('Error:', str(e))
+        return None
+
+def extract_domain(message_data):
     try:
         domain = message_data['message']['text'].strip().lower()
         distance, domain = pick_one(domain, list_domains)
@@ -270,7 +298,7 @@ def extractDomain(message_data):
         print('Error:', str(e))
         return None
 
-def extractRelation(message_data):
+def extract_relation(message_data):
     try:
         relation = message_data['message']['text'].strip().lower()
         distance, relation = pick_one(relation, list_relations)
@@ -282,7 +310,7 @@ def extractRelation(message_data):
         print('Error:', str(e))
         return None
 
-def extractDirection(message_data):
+def extract_direction(message_data):
     try:
         direction = message_data['message']['text'].lower()
         if (direction != "yes" and direction != "no"):
@@ -293,7 +321,7 @@ def extractDirection(message_data):
         print('Error:', str(e))
         return None
 
-def extractQuestion(message_data):
+def extract_question(message_data):
     try:
         question = message_data['message']['text'].strip()
         t = question_classify(question)
@@ -386,5 +414,46 @@ def get_random_relation(relation_check):
 
     return random.choice(res)
 
+
 def get_question_template(relation_num):
     return random.choice(question_templates[relation_num])
+
+
+def list_domain_encode(list_domains):
+    encode = "0000000000000000000000000000000000"
+    for i in list_domains:
+        # print type(i)
+        if i == '' or i == '[]':
+            continue
+        encode = encode[:domain_to_num[i.strip().lower()]] + '1' + encode[domain_to_num[i.strip().lower()] + 1 : ]
+
+    return encode
+
+
+def list_domain_decode(s):
+    domains = []
+    for i in range(len(s)):
+        if s[i] =='1':
+            domains.append(list_domains[i])
+
+    return domains
+
+def list_domain_num_encode(list_domains_num):
+    encode = "0000000000000000000000000000000000"
+    for i in list_domains_num:
+        encode = encode[:i] + '1' + encode[i+1:]
+
+    return encode
+
+
+def update_kbs(conversation):
+    new_record = KBS(c1=conversation.c1,
+                     c1_id=conversation.c1_id,
+                     c2=conversation.answer,
+                     c2_id=None,
+                     relation=list_relations[conversation.relation].upper(),
+                     relation_num=conversation.relation,
+                     domains=list_domain_num_encode([conversation.domain]),
+                     truth=True)
+    db.session.add(new_record)
+    update_centralized_kbs(conversation)
