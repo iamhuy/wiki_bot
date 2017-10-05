@@ -1,0 +1,1314 @@
+{
+    "sound": [
+        {
+            "answer": "Yes", 
+            "question": "Does Afrobeat emit a according sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Bassoon emit a plaintive sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Tinker sound rush ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Marimba sound earthy ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Nian Gao sound identical ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Viola sound muted ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Contrabass trombone sound hard ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Cello emit a dark sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Gong sound majestic ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Cello emit a sensuous sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Ferreira emit a glum sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Cello sound lively ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Bass clarinet emit a velvety sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Double bass emit a weighty sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Timpani sound mellow ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is paratransit sound uninitiated ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Piccolo emit a piercing sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Field drum emit a dark sound ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Timpani sound round ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does crocodile sound like loudly breathing and grownling sound?"
+        }
+    ], 
+    "specialization": [
+        {
+            "answer": "Yes", 
+            "question": "Is Hausen bei Brugg a specialization of a municipality ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Ajri Demirovski a specialization of an singer ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Ala\u00e7at\u0131 Dam a specialization of a dam ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Elaeocyma arenensis a specialization of a species ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is in turn a specialization of a member ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Vellayur a specialization of a village ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Anachis valledori a specialization of a species ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Wyn Hoop a specialization of a singer ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Thep Sathit a specialization of a district ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Gourmya gourmyi a specialization of a species ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is plutonium a specialization of a sanctuary ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Cystiscus mosaica a specialization of a species ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Wingfield 's father a specialization of a Master ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Svengali a specialization of an drama ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is angustana a specialization of a moth ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Obesotoma pulcherrima a specialization of a species ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is R\u00f8dtvet a specialization of a station ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Clemens-Heinrich Graf von Kageneck a specialization of a highly ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Quincy Masonic Building a specialization of a temple ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Multidimensional Measurement a specialization of a report ?"
+        }
+    ], 
+    "similarity": [
+        {
+            "answer": "Yes", 
+            "question": "Is it possible to confuse Pathakhera with India?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is nimono like chikuzenni?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is it possible to confuse RODEL with ARCADY?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is Oblique shock waves similar to Hereford Map?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do International Day of Pink share features with Pink Shirt Day?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are crowdfunding and private placement similar to each other?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is closers like Joakim Soria?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Are Pupusas similar to mochi ice cream?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Anaglypta look similar to Lincrusta?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Leopards similar to cheetah?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is restrictions similar to authoritative parenting?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is typewriter similar to diarrheal diseases?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is it possible to confuse GreenBrowser with Maxthon?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is restrictions similar to enteroviruses?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Are Everybody Hurts and limousine similar to each other?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is pedant like Hunter Hearst Helmsley?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Mbo language similar to Ndaka?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is Oblique shock waves similar to cheesecloth?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Urd\u0103 look similar to Ricotta?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is it possible to confuse MIIPS with FROG?"
+        }
+    ], 
+    "taste": [
+        {
+            "answer": "Yes", 
+            "question": "Does Sweat taste vinegar ?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "has african rice  a bittersweet taste?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Sosyo taste like alcohol? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Alboraya taste typical ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Escargot flavour mushy ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Kelp taste rubbery ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Escargot taste salty ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Tahini taste oily ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Tum-E fruitummies has a fruit flavour?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Amurca has a bitter flavour?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the taste of Sharkberry Cream similar to the taste of blueberry?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the taste of Sweat sour ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are People taste additive ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the flavour of animal buttery ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are the flavour of Capons unnecessary ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "has port salut  a mild  taste?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Water taste sweet ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the taste of Epsom salts salty ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Eugenia involucrata taste sweet?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Basil taste like anise?"
+        }
+    ], 
+    "material": [
+        {
+            "answer": "Yes", 
+            "question": "Is tankard made of silver?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is roots made of variety?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is nut made of ebony?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Mayo scissors made of stainless steel?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Shoe polish made of mix?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Uttapam made of ratio?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Muscadet made of grape?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Olivet cendr\u00e9 made of milk?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is One made of hundreds?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Enrico Lombardi made of fields?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is thinksound made of wood?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Notre-Dame de l'Assomption made of sandstone?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Statue of Iddi-Ilum made of soapstone?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is New Brunswick Legislature made of carriers?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is garden hose made of synthetic rubber?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is GmbH made of butyrate?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is folding carton made of paperboard?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Maganik made of limestone?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is tunnel washer made of chocolate?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is island of made of mixture of spices?"
+        }
+    ], 
+    "generalization": [
+        {
+            "answer": "Yes", 
+            "question": "Is Waste Land a month?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Imbal a technique?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Maria Kimberly a model ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Dutch Loaf a filler?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is It an example of improvement?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is chakhe a zither?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Ukhrul a home?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Hilal-i-Jur an example of second highest military award of Pakistan?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Jayendra Saraswathi an example of Guru?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Catedral San Carlos De Borromeo a seat?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Rosette de Lyon an example of saucisson?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Seventh Generation , Inc. a American company?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Elephant Parade a open-air exhibition?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is turntable an example of turntable?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is tippet a wrap?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Annet van Egmond an example of designer?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Pleurotomella cancellata a species ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Kitron an example of citron liqueur?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Al-Khader an example of town?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Radziej\u00f3w a town?"
+        }
+    ], 
+    "color": [
+        {
+            "answer": "Yes", 
+            "question": "Is Skiggaret black-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Anchovies silver?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Scottish Green Party green-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Camaraou noir red-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Albaranzeuli nero red-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Hypericin red-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is African spotted creeper spotted?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Chlorastrolite green?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Mu Cephei red-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Pais red?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Margaritasite yellow?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is 18 Delphini yellow?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Rubrene red?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Tsardana red-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Sun yellow-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "has arare color pink?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Assam tea black?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "has crystals color orange-yellow?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Ruch\u00e9 red-colored?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Green Dome green-colored?"
+        }
+    ], 
+    "shape": [
+        {
+            "answer": "Yes", 
+            "question": "Is the form of 58th parallel south circle?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the form of Kalasag rectangular?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "is plug  in the shape of a x?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the shape of Shell rings curve ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the form of London Basin triangular?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Has Uterus the shape of a triangle?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the shape of Intraclasts irregular ?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Has Electromagnet the shape of a diamond?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is anchor the shape of Darabuka?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the form of Pazurgo rectangular?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "is first trumpets  in the shape of a x?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is Lake Otradnoye's shape boot?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is Y a features of fountain?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the shape of Monmouth Tract triangular ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is orbit's shape parabolic?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is M\u00e9kinac lake's shape thread?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is mushroom-shaped the shape of Djembe?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is hour glass the shape of Ghaychak?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Italy's shape boot?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is entablature's shape ellipse?"
+        }
+    ], 
+    "part": [
+        {
+            "answer": "Yes", 
+            "question": "Do Lawani have Chief Steven Lawani -LRB- December 1947 -RRB- early education at St. Augustine Primary School Otukpo Mount St. Michaels school ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do temple have inscriptions ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do person have picture ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do pass have steep paved ascent from east up slopes of northern Drakensberg mountains m ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do its surrounding area have 17.4 % ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do play have play debut in Wilkes-Barre Pennsylvania ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do those have nails ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do municipality have population up of 2005 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Indian Air Force have Airmen Training Centre at Sambra ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Crosstour slots have two rows ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Jhenam have population of 5307 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is brother a part of Parliament ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Several other houses have rights ?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Is Sarehole Mill member of Wet Tropics World Heritage Area?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do people have version ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do large chapel in settlement have sanctuary with two storey belfry ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Adults have each with spot ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do McMillan have first run for political office ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is It a part of traditional region of Lower Carniola ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do hospital have name ?"
+        }
+    ], 
+    "place": [
+        {
+            "answer": "Yes", 
+            "question": "Is De Berg Pass located in Lydenburg ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "is World War I in Weissensee, Berlin?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Rosehill Secondary College located in Niddrie ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "is radio station in Parksville, British Columbia?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Pianiga located in Santa Maria di Sala ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Aldenham Reservoir located in England ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Eaglecrest High School in Aurora ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Kessler Park Historic District in Texas ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Montagu Pass in George ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Talcher Super Thermal Power Station placed in Odisha ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Maple Falls located in Bellingham ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Lunglei Government College located in Lunglei ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is South Region in portion?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Sissonville in Virginia ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Sandl placed in Upper Austria ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is City Hall in City Hall?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Baptist located in U.S. Route ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Pella Lutheran Church located in Mutual ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Barrancas located in Albania ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Faridia Islamic University in Pakistan ?"
+        }
+    ], 
+    "purpose": [
+        {
+            "answer": "Yes", 
+            "question": "Are Trap bars used for performing deadlifts shrugs ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Metagenomics used for studying microbial communities ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is cold water used for cooking sushi rice ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are Pressure cookers used for cooking food ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are patients used for urinating ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is developing otherAMATO used for developing other ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are Cattle used for pulling carts ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Zirconium silicate used for manufacturing refractory material ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Reformist Centre used for defining itself ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Membrane technology used for recycling wastewater ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are Variations used for rotating mechanical systems ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are Whippletrees used for pulling a vehicle ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Kulintang music used for communicating long distance messages ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are surprises used for seeing him ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Crown molding used for capping walls ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is tripelennamine used for treating conditions ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is XOR used for creating parity information ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are Theodolites used for surveying applications ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is database engine used for Microsoft Access?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Nagamese used for communicating ?"
+        }
+    ], 
+    "activity": [
+        {
+            "answer": "No", 
+            "question": "Does bulldog hopping?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does crocodile swim?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Does falcon run?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Does flamingo run?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Does killer whale breed?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does dusky dolphin dive?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does fly prey?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is possible for Endoglycosidase H to do cleave?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does falcon hunt?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does impala jump?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does american foxhound run?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does chimpanzee recognize?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does binturong swim and dive?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does caiman lizard hunt?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does lobster swim?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does hippo run?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does leaf tailed gecko hunt?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is possible for PowerISO to do modify?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Does ocelot reproduce?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does flamingo breed?"
+        }
+    ], 
+    "how_to_use": [
+        {
+            "answer": "Yes", 
+            "question": "Is diesel-electric locomotive used by Swedish State Railways?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do you squeeze a Antistress ball?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do you plug a Headphones?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Do you drive a drum?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Do you plug a piano?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is modify a correct way to use VP4?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is artificial fly used by anglers?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Do you drink a gun?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is approve a correct way to use telephone tapping?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do you blow a whistle?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is mortar used by Austria-Hungary?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is diesel-electric locomotive used by Malmtrafik?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do you take photos a camera?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is check a correct way to use Population?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is algorithm used by Google Search?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is applications used by UK?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is computer bus used by Hewlett-Packard?"
+        }, 
+        {
+            "answer": "No", 
+            "question": "Do you smoke a car?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is apply a correct way to use silicon?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Polish coat of arms used by szlachta?"
+        }
+    ], 
+    "smell": [
+        {
+            "answer": "Yes", 
+            "question": "Is the smell of Hydrogen selenide similar to the smell of rotten eggs?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Menthane-3 smell like menthol?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Diacetyl smell like butter ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Skatole smell like putrid ? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Balsam smell like cinnamon ? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is tissue smell like similar ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does tissue smell like fenugreek ? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Fruit bodies smell like powder ? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does brandy smell like fruity ? "
+        }, 
+        {
+            "answer": "No", 
+            "question": "Does Cystolepiota bucknallii smell like honey?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Thymol smell like smoky ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the smell of Guibourtia coleosperma similar to the smell of menthol?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Are the smell of Fruit bodies like unknown ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Acetanisole smell like butter ? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the smell of Math like lots ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Homer smell like cake ? "
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the smell of Balsam like vanilla ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the smell of Weak salts similar to the smell of acetic acid?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Iodoform smell like chloroform?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Does Suillus grevillei smell like leaves?"
+        }
+    ], 
+    "time": [
+        {
+            "answer": "Yes", 
+            "question": "Do Allan formed Rokket Music In 2009 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is album was released globally at_timeApril 2010 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do LDS Church began in 1986 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Hansen served until 1965 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is post office was established in 1884 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is family friendship was developed In 1880s ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is simple fortified residence was added during century ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is European Championships were held In 1950 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do lead singer performed vocals In February 2012 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Sergei Sergeievich Salazkin -LRB- 1862-1932 -RRB- graduating in 1891 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do St. George 's Catholic Church -LRB- South Academy -RRB- added in 2001 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do event always occurs over weekend ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is This was played from June 10-13 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is It was discovered on April 15 1993 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do John Acland obtained Letters Patent at_timeJanuary 1678 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do his designed effects From 1960s ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is station was absorbed at_timeApril 1987 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do property park owned in 1949 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do Leocadia I. Zak has served since January 20 2009 ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Do New Zealand played in 1991 ?"
+        }
+    ], 
+    "size": [
+        {
+            "answer": "Yes", 
+            "question": "Is siphonal canal short ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the plane small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is House large ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the \u03b22 small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the noodle small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the arme small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the formula_9 small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is SH short ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the scale small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Hebri small ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the village small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the nanocrystal small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is sheet pieces small ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the cemetery small?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the finalist big?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the bantamweight little?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is site short ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is Cornwerd small ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is flowers small ?"
+        }, 
+        {
+            "answer": "Yes", 
+            "question": "Is the centre small?"
+        }
+    ]
+}

@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 28 17:28:22 2016
+
+@author: Bing Liu (liubing@cmu.edu)
+@edited: Gia Huy
+
+Added a new intent function that is used for relation detection
+"""
 import tensorflow as tf
 
 import data_utils
@@ -63,10 +72,17 @@ if ckpt:
 vocab, rev_vocab = data_utils.initialize_vocab(FLAGS.data_dir + '/vocabulary/' + 'in_vocab_300000.txt')
 label_vocab, rev_label_vocab = data_utils.initialize_vocab(FLAGS.data_dir + '/vocabulary/' + 'label.txt')
 
+
+
 def intent_predict(sentence):
+    """ Predict a relation that a sentence mention
+
+    :param sentence: A string whose relation will be predicted
+    :return: A string that indicates one 16 relations in "data/given_data/relation_list.txt" file
+    """
     tokens = data_utils.naive_tokenizer(sentence.strip())
     ids = [vocab.get(token, 1) for token in tokens]
-    null_tags = [2 for token in tokens]
+    null_tags = [2 for _ in tokens]
     encoder_inputs, tags, tag_weights, sequence_length, labels = model_test.get_one([[[ids, null_tags, [0]]]], 0, 0)
     step_outputs = model_test.classification_step(sess,
                                                   encoder_inputs,
@@ -76,9 +92,7 @@ def intent_predict(sentence):
                                                   True)
     _, step_loss, class_logits = step_outputs
 
-    # tmp = [(index, i) for index, i in enumerate(class_logits[0])]
-    # tmp = sorted(tmp, key = lambda element: element[1], reverse = True)
-    # return rev_label_vocab[tmp[0][0]], rev_label_vocab[tmp[1][0]]
     label_id = np.argmax(class_logits[0])
+
     return rev_label_vocab[label_id]
 

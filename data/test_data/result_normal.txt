@@ -1,0 +1,1971 @@
+{
+    "sound": [
+        {
+            "answer": "graceful", 
+            "actual_answer": "filigree", 
+            "question": "How is Concert flute sound like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "heavy", 
+            "actual_answer": "weightless", 
+            "question": "What sound can Double bass emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "venerable", 
+            "actual_answer": "booming", 
+            "question": "How is the sound of Field drum like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "husky", 
+            "actual_answer": "husky", 
+            "question": "What sound can Contrabassoon emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "metallic", 
+            "actual_answer": "solemn", 
+            "question": "How is the sound of Violin like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "inhuman", 
+            "actual_answer": "robotic", 
+            "question": "How is the sound of Spears like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "yearning", 
+            "actual_answer": "abrasive", 
+            "question": "What sound is emitted by album ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "vibrant", 
+            "actual_answer": "solemn", 
+            "question": "How is the sound of Violin like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "bark", 
+            "actual_answer": "bark", 
+            "question": "What does dog sound like?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "velvety", 
+            "actual_answer": "ponderous", 
+            "question": "What sound does Bass tuba emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "velvety", 
+            "actual_answer": "resonant", 
+            "question": "How is the sound of Marimba like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "sustaining", 
+            "actual_answer": "gentle", 
+            "question": "What sound can Cello emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "reciting", 
+            "actual_answer": "indistinguishable", 
+            "question": "How are People sound like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "better", 
+            "actual_answer": "better", 
+            "question": "How is the sound of audio like ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "cease", 
+            "actual_answer": "cease", 
+            "question": "What sound can Marlow emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "mighty", 
+            "actual_answer": "church bell", 
+            "question": "What sound does Gong emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "hearty", 
+            "actual_answer": "weighty", 
+            "question": "What sound does Contrabass tuba emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "powerful", 
+            "actual_answer": "round", 
+            "question": "What sound is emitted by Viola ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "lively", 
+            "actual_answer": "solemn", 
+            "question": "What sound can Violin emit ?", 
+            "actual_relation": "sound"
+        }, 
+        {
+            "answer": "brilliant", 
+            "actual_answer": "reedy", 
+            "question": "What sound is emitted by Clarinet ?", 
+            "actual_relation": "sound"
+        }, 
+        4
+    ], 
+    "specialization": [
+        {
+            "answer": "Jack Perkowski", 
+            "actual_answer": "Jane Myron", 
+            "question": "Who is an example of a graduate ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Ottfried Fischer", 
+            "actual_answer": "Hori Ahipene", 
+            "question": "Who is an example of a actor ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Brooke 's duiker", 
+            "actual_answer": "Balea heydeni", 
+            "question": "What is an example of a species ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Akividu", 
+            "actual_answer": "Fjerdingby", 
+            "question": "What is an example of a village ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Mountain Park", 
+            "actual_answer": "Elysian Heights", 
+            "question": "What is an example of an neighborhood ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "sandals", 
+            "actual_answer": "falcon", 
+            "question": "What is an example of a symbol ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "event", 
+            "actual_answer": "Northern Pride", 
+            "question": "What is an example of a celebration ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Christella dentata", 
+            "actual_answer": "Christella dentata", 
+            "question": "What is an example of a fern ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Sayo", 
+            "actual_answer": "Tiro Afeta", 
+            "question": "What is a specific woreda?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Pontiothauma archibenthalis", 
+            "actual_answer": "Balea heydeni", 
+            "question": "What is an example of a species ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Christ Episcopal Church", 
+            "actual_answer": "Templo Expiatorio del Sant\u00edsimo Sacramento", 
+            "question": "What is an example of an church ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Psalm 43", 
+            "actual_answer": "church 's doctrine", 
+            "question": "What is an example of a continuation ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Witrogoszcz-Kolonia", 
+            "actual_answer": "Fjerdingby", 
+            "question": "What is an example of a village ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "S. nigra", 
+            "actual_answer": "TEA", 
+            "question": "What is an example of an abbreviation ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Clavatula tripartita", 
+            "actual_answer": "Balea heydeni", 
+            "question": "What is an example of a species ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Anjediva Island", 
+            "actual_answer": "Keswick Island", 
+            "question": "What is an example of an island ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Pyramidenspitze", 
+            "actual_answer": "highest point", 
+            "question": "What is an example of a peak ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Half-banded Bryolymnia", 
+            "actual_answer": "Atteva fulviguttata", 
+            "question": "What is an example of a moth ?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "Scotland", 
+            "actual_answer": "Scotland", 
+            "question": "What was a specific Great Offices of State?", 
+            "actual_relation": "specialization"
+        }, 
+        {
+            "answer": "RX J1856", 
+            "actual_answer": "RX J1856", 
+            "question": "What is a specific Magnificent Seven?", 
+            "actual_relation": "specialization"
+        }, 
+        3
+    ], 
+    "similarity": [
+        {
+            "answer": "shrimp", 
+            "actual_answer": "shrimp", 
+            "question": "What does lobster look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "TWC", 
+            "actual_answer": "TWC", 
+            "question": "What is similar to Direct Traffic Control?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "Galapagos penguin", 
+            "actual_answer": "Galapagos penguin", 
+            "question": "What does humboldt penguin look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "satay", 
+            "actual_answer": "satay", 
+            "question": "What is chilli similar to?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "TC", 
+            "actual_answer": "Choplifter", 
+            "question": "What does Gameplay look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "Guinea pig", 
+            "actual_answer": "Guinea pig", 
+            "question": "What does rock hyrax resemble to?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "Romania", 
+            "actual_answer": "Romania", 
+            "question": "What does Moldovan cuisine look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": " Jacksonville Jaguars ", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "what is similar to name ?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "chloroplast", 
+            "actual_answer": "chloroplast", 
+            "question": "what does Chlamydiaceae makes you think of?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "Blue Ribbon Comics", 
+            "actual_answer": "Blue Ribbon Comics", 
+            "question": "What is similar to Top-Notch Comics?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "sitcoms", 
+            "actual_answer": "sitcoms", 
+            "question": "What does formats similar to?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "prenuptial agreements", 
+            "actual_answer": "prenuptial agreements", 
+            "question": "What does Postnuptial agreements look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "arepa", 
+            "actual_answer": "arepa", 
+            "question": "What is similar to Pupusas?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "deer antlers", 
+            "actual_answer": "deer antlers", 
+            "question": "What does coral look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "Pomeranian Goose", 
+            "actual_answer": "Pomeranian Goose", 
+            "question": "What is Scania goose similar to?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "excavate", 
+            "actual_answer": "excavate", 
+            "question": "What does puffin look like?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "sildenafil", 
+            "actual_answer": "sildenafil", 
+            "question": "What does vasodilators similar to?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "pig", 
+            "actual_answer": "pig", 
+            "question": "What does collared-peccary resemble to?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "Cisco IOS", 
+            "actual_answer": "Cisco IOS", 
+            "question": "What is similar to CLI interface?", 
+            "actual_relation": "similarity"
+        }, 
+        {
+            "answer": "lobster", 
+            "actual_answer": "prawns", 
+            "question": "What does crab look like?", 
+            "actual_relation": "similarity"
+        }, 
+        17
+    ], 
+    "taste": [
+        {
+            "answer": "better", 
+            "actual_answer": "better", 
+            "question": "What are the taste of things like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "better", 
+            "actual_answer": "creamy", 
+            "question": "What is raw milk taste like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "nutty", 
+            "actual_answer": "muddy", 
+            "question": "What does quinoa taste like?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "bitter", 
+            "actual_answer": "larger", 
+            "question": "What is Fruit taste like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "bitter", 
+            "actual_answer": "oily", 
+            "question": "What is Tahini flavor Like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "hot", 
+            "actual_answer": "hot", 
+            "question": "What is Watercress taste like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "bitter", 
+            "actual_answer": "bitter", 
+            "question": "What is Barium taste like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "spongy", 
+            "actual_answer": "spongy", 
+            "question": "What is the taste of Eggplant like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "almonds", 
+            "actual_answer": "larger", 
+            "question": "What taste is similar to fruit?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "tart", 
+            "actual_answer": "sweet", 
+            "question": "What is Pomegranate taste like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "creamy", 
+            "actual_answer": "creamy", 
+            "question": "What is Raw milk taste like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "sour", 
+            "actual_answer": "tart", 
+            "question": "What is Rhubarb flavor Like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "grapefruit", 
+            "actual_answer": "grapefruit", 
+            "question": "What is Yoli's taste?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "sour", 
+            "actual_answer": "sweet", 
+            "question": "What is Vio flavor Like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "tarty", 
+            "actual_answer": "sweet", 
+            "question": "What is the flavor of Monstera Deliciosa like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "spicy", 
+            "actual_answer": "spicy", 
+            "question": "What flavour has Pepper jack cheese?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "good", 
+            "actual_answer": "good", 
+            "question": "What is the taste of Bremer Klaben like ?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "aroma", 
+            "actual_answer": "aroma", 
+            "question": "What does taste like Flanders red ale?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "grapefruit", 
+            "actual_answer": "grapefruit", 
+            "question": "What is Mountain Dew's taste?", 
+            "actual_relation": "taste"
+        }, 
+        {
+            "answer": "spicy", 
+            "actual_answer": "spicy", 
+            "question": "What flavour has Empal gentong?", 
+            "actual_relation": "taste"
+        }, 
+        11
+    ], 
+    "material": [
+        {
+            "answer": "open platform", 
+            "actual_answer": "open platform", 
+            "question": "What constitutes whistle-stop tour?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "Pedro Ximenez", 
+            "actual_answer": "Pedro Ximenez", 
+            "question": "What constitutes Sherry?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "combination", 
+            "actual_answer": "combination", 
+            "question": "What constitutes Warner Revolution I?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "blend", 
+            "actual_answer": "blend", 
+            "question": "What is Orenburg Shawl made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "gold", 
+            "actual_answer": "gold", 
+            "question": "What constitutes traditions?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "mobile phones", 
+            "actual_answer": "mobile phones", 
+            "question": "What is Numbers made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "brass", 
+            "actual_answer": "brass", 
+            "question": "What constitutes agraffe?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "steel", 
+            "actual_answer": "steel", 
+            "question": "What is M-96 made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "strips", 
+            "actual_answer": "strips", 
+            "question": "What is Purfling made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "stainless steel", 
+            "actual_answer": "stainless steel", 
+            "question": "What constitutes knockbox?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "neutral spirit", 
+            "actual_answer": "neutral spirit", 
+            "question": "What constitutes Hideous?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "rocks", 
+            "actual_answer": "rocks", 
+            "question": "What constitutes Assemblage?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "wood", 
+            "actual_answer": "wood", 
+            "question": "What constitutes gambang?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "Idaho potatoes", 
+            "actual_answer": "Idaho potatoes", 
+            "question": "What constitutes Grand Teton Vodka?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "piece of material", 
+            "actual_answer": "piece of material", 
+            "question": "What constitutes backboard?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "rocks", 
+            "actual_answer": "rocks", 
+            "question": "What constitutes Lagorai?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "parts", 
+            "actual_answer": "parts", 
+            "question": "What is Podaca made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "sugar cane", 
+            "actual_answer": "sugar cane", 
+            "question": "What is Cocoroco made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "grains", 
+            "actual_answer": "grains", 
+            "question": "What is Helmipuuro made of?", 
+            "actual_relation": "material"
+        }, 
+        {
+            "answer": "red velvet", 
+            "actual_answer": "red velvet", 
+            "question": "What constitutes Kiani Crown?", 
+            "actual_relation": "material"
+        }, 
+        20
+    ], 
+    "generalization": [
+        {
+            "answer": "depot", 
+            "actual_answer": "depot", 
+            "question": "What is Great Northern Depot ?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "Institute", 
+            "actual_answer": "Institute", 
+            "question": "What is Institut de Math\u00e9matiques de Toulouse?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "work", 
+            "actual_answer": "work", 
+            "question": "What is CBA ?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "type", 
+            "actual_answer": "type", 
+            "question": "What is parliamentary republic?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "body", 
+            "actual_answer": "body", 
+            "question": "What is State Council?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "type", 
+            "actual_answer": "type", 
+            "question": "What is Tikka?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "division", 
+            "actual_answer": "division", 
+            "question": "What is Idangai?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "process", 
+            "actual_answer": "process", 
+            "question": "What is Hubbing?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "districts", 
+            "actual_answer": "districts", 
+            "question": "What is Sami District in general?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "pile dwelling", 
+            "actual_answer": "pile dwelling", 
+            "question": "What is Alvastra pile-dwelling?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "passage", 
+            "actual_answer": "passage", 
+            "question": "What is Theodul Pass?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "birthplace", 
+            "actual_answer": "birthplace", 
+            "question": "What is Bithoor?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "runestone", 
+            "actual_answer": "runestone", 
+            "question": "What is \u00d6land runic inscription 18?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "music instrument", 
+            "actual_answer": "music instrument", 
+            "question": "What is Rubab?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "term", 
+            "actual_answer": "term", 
+            "question": "What is Specialized Mobile Radio?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "area", 
+            "actual_answer": "area", 
+            "question": "What is Selva Zoque?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "s and", 
+            "actual_answer": "s and", 
+            "question": "What is Thames Barrier?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "tool", 
+            "actual_answer": "tool", 
+            "question": "What is paper cutter?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "bag", 
+            "actual_answer": "bag", 
+            "question": "What is airsickness bag?", 
+            "actual_relation": "generalization"
+        }, 
+        {
+            "answer": "town", 
+            "actual_answer": "town", 
+            "question": "What is \u0141omianki?", 
+            "actual_relation": "generalization"
+        }, 
+        20
+    ], 
+    "sum_true_count": 210, 
+    "color": [
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What is the color of Pallagrello nero?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "green", 
+            "actual_answer": "green", 
+            "question": "What color is Osarizawaite?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What is the color of Cinsaut?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "yellow", 
+            "actual_answer": "yellow", 
+            "question": "What is the color of organophosphorus?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "yellow", 
+            "actual_answer": "yellow", 
+            "question": "What is the color of KELT-2A?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What color is Gymnothamnion?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What is the color of Sangiovese?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "light", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What color is Trondhjemite?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "dark", 
+            "actual_answer": "dark", 
+            "question": "What color is Amurca?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What color is Spring Hill Library?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "dark", 
+            "actual_answer": "dark", 
+            "question": "What color is fruit brandy?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What is the color of Montepulciano d'Abruzzo?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What color is Mujuretuli?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "pale", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What color is African crimson-winged finch?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What is the color of Sulforhodamine 101?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "light", 
+            "actual_answer": "light", 
+            "question": "What is the color of Vellus hair?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "green", 
+            "actual_answer": "green", 
+            "question": "What is the color of Sincosite?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "what color can papal slippers have?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "green", 
+            "actual_answer": "green", 
+            "question": "what color can flowers have?", 
+            "actual_relation": "color"
+        }, 
+        {
+            "answer": "red", 
+            "actual_answer": "red", 
+            "question": "What color is NML Cygni?", 
+            "actual_relation": "color"
+        }, 
+        16
+    ], 
+    "shape": [
+        {
+            "answer": "straight.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of All-Big selection ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "graceful.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Irisbrook home ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "flat.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Lynette Saxon ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "ovate", 
+            "actual_answer": "ovate", 
+            "question": "What is the form of blade ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "oval.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of STP logo ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "round.", 
+            "actual_answer": "India", 
+            "question": "What is the shape of Mlaren lake ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "thread", 
+            "actual_answer": "thread", 
+            "question": "What shape does wire have?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "round.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Russia eye ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "deformed.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Belial brother ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "round.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Taylor defender ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "closed.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Lotus approach ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "cup", 
+            "actual_answer": "cup", 
+            "question": "Which is the shape of Uri?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "curved.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Circle street ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "closed.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Midland Great Northern line ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "aerodynamic.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the shape of Tatra cars ?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "ball", 
+            "actual_answer": "ball", 
+            "question": "Which is the shape of Meatwad?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "triangle", 
+            "actual_answer": "triangle", 
+            "question": "Which is the form of Halabiye?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "egg shaped", 
+            "actual_answer": "egg shape", 
+            "question": "What shape does Ocarina have?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "pyramid", 
+            "actual_answer": "pyramid", 
+            "question": "Which is the shape of Bizarro World?", 
+            "actual_relation": "shape"
+        }, 
+        {
+            "answer": "triaxial ellipsoid", 
+            "actual_answer": "triaxial ellipsoid", 
+            "question": "Which is the shape of Tethys like?", 
+            "actual_relation": "shape"
+        }, 
+        7
+    ], 
+    "part": [
+        {
+            "answer": "Whitewater Baldy", 
+            "actual_answer": "Baldy", 
+            "question": "What is a part of Mogollon-Datil volcanic field?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "O'Malley", 
+            "actual_answer": "O'Malley", 
+            "question": "What is a part of Order of Friars Minor Capuchin?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Van Kampen", 
+            "actual_answer": "Van Kampen", 
+            "question": "What was a part of Koninklijke Nederlandse Akademie van Wetenschappen?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Gilford High School", 
+            "actual_answer": "Gilford High School", 
+            "question": "What is a part of New Hampshire Interscholastic Athletic Association?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Cai Wu", 
+            "actual_answer": "Cai Wu", 
+            "question": "What is a part of 17th Central Committee of the Communist Party of China?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Villa Medici", 
+            "actual_answer": "Villa Medici", 
+            "question": "What was a part of gardens of Lucullus?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Charles Sturt University Faculty of Arts", 
+            "actual_answer": "Charles Sturt University Faculty of Arts", 
+            "question": "What is a part of Charles Sturt University?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Aragon", 
+            "actual_answer": "Aragon", 
+            "question": "What is a part of Cabard\u00e8s AOC?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "NAIT", 
+            "actual_answer": "ACAD", 
+            "question": "What is a part of Alberta?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Pullman High School", 
+            "actual_answer": "Pullman High School", 
+            "question": "What is a part of Great Northern?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Octavian \u0162icu", 
+            "actual_answer": "Ludmila Tihonov", 
+            "question": "What is a part of Commission for the Study of the Communist Dictatorship in Moldova?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "battle of Sidi Bou Zid", 
+            "actual_answer": "Lahmar", 
+            "question": "What was a part of Tunisia?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Pasquotank County", 
+            "actual_answer": "Pasquotank County", 
+            "question": "What is a part of Elizabeth City , NC?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Girlguiding Bermuda", 
+            "actual_answer": "Girlguiding Bermuda", 
+            "question": "What is a part of Caribbean Link for Guiding?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Krebs", 
+            "actual_answer": "Kennedy", 
+            "question": "What was a part of Nuffield?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Ramberg", 
+            "actual_answer": "Ramberg", 
+            "question": "What is a part of collective municipality?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Nightingale Island", 
+            "actual_answer": "Nightingale Island", 
+            "question": "What is a part of Nightingale Islands?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Fraenkel", 
+            "actual_answer": "Fraenkel", 
+            "question": "What was a part of social democrats?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Saharsa district", 
+            "actual_answer": "Saharsa district", 
+            "question": "What was a part of Munger?", 
+            "actual_relation": "part"
+        }, 
+        {
+            "answer": "Miss World", 
+            "actual_answer": "Miss World", 
+            "question": "What is a part of Big Four international beauty pageants?", 
+            "actual_relation": "part"
+        }, 
+        15
+    ], 
+    "place": [
+        {
+            "answer": "Brougham", 
+            "actual_answer": "Brougham", 
+            "question": "Where is Brougham Hall located ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Eifel", 
+            "actual_answer": "Inde", 
+            "question": "Where is Friesenrath located ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "K-4", 
+            "actual_answer": "K-4", 
+            "question": "Where is Elmo placed ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Clermont County", 
+            "actual_answer": "Clermont County", 
+            "question": "Where can Utopia be found ? ", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Suffolk", 
+            "actual_answer": "Suffolk", 
+            "question": "Where is Monk Soham?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Pico", 
+            "actual_answer": "Pico", 
+            "question": "Where is Calheta de Nesquim located ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Tambon", 
+            "actual_answer": "Trang Province", 
+            "question": "Where is Trang Airport located ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Frisco", 
+            "actual_answer": "Frisco", 
+            "question": "Where is Oak Point placed ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Strzelin", 
+            "actual_answer": "Strzelin", 
+            "question": "Where is Szczodrowice?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Olszewo-Borki", 
+            "actual_answer": "Olszewo-Borki", 
+            "question": "Where is \u017bebry-Chudek?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Government Center", 
+            "actual_answer": "City Hall", 
+            "question": "Where is City Hall located ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Bay", 
+            "actual_answer": "Bay", 
+            "question": "Where can Gopalpur be found ? ", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Yosemite National Park", 
+            "actual_answer": "Yosemite National Park", 
+            "question": "Where is Ostrander Lake placed ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Freedom", 
+            "actual_answer": "Freedom", 
+            "question": "Where can Ossipee Lake be found ? ", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Sulzberger Ice Shelf", 
+            "actual_answer": "Marie Byrd Land", 
+            "question": "Where is Hammond Glacier ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Maine", 
+            "actual_answer": "Somerset County", 
+            "question": "Where is Flagstaff Lake located ?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Greece", 
+            "actual_answer": "Greece", 
+            "question": "Where can Stoupa be found ? ", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "downtown Los Angeles", 
+            "actual_answer": "downtown Los Angeles", 
+            "question": "When did Staples Center open?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Walworth County", 
+            "actual_answer": "Walworth County", 
+            "question": "Where is Williams Bay?", 
+            "actual_relation": "place"
+        }, 
+        {
+            "answer": "Genesee County", 
+            "actual_answer": "Mobile Bay", 
+            "question": "Where is Montrose located ?", 
+            "actual_relation": "place"
+        }, 
+        14
+    ], 
+    "purpose": [
+        {
+            "answer": "shoring", 
+            "actual_answer": "shoring", 
+            "question": "What can Acrow props be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "exposing basic logic", 
+            "actual_answer": "exposing basic logic", 
+            "question": "What can I use MVEL for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "gathering intelligence", 
+            "actual_answer": "gathering intelligence", 
+            "question": "What can I use Agents for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "developing non-GUI programs", 
+            "actual_answer": "developing non-GUI programs", 
+            "question": "What can Qt be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "binding", 
+            "actual_answer": "binding", 
+            "question": "What is one possible purpose of pointers to functions?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "preparing acetate esters", 
+            "actual_answer": "preparing acetate esters", 
+            "question": "What can I use Acetic anhydride for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "civilians", 
+            "actual_answer": "civilians", 
+            "question": "Why do you use a internment camp?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "wood", 
+            "actual_answer": "wood", 
+            "question": "Why do you use a forest?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "curing meat", 
+            "actual_answer": "curing meat", 
+            "question": "What can I use Nitrites for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "switching international calls", 
+            "actual_answer": "switching international calls", 
+            "question": "What can area codes be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "starting", 
+            "actual_answer": "starting", 
+            "question": "What can Glow plugs be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "asking tough questions", 
+            "actual_answer": "asking tough questions", 
+            "question": "What can I use Students for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "suppressing this aging mechanism", 
+            "actual_answer": "suppressing this aging mechanism", 
+            "question": "What can Antioxidants be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "switching", 
+            "actual_answer": "switching", 
+            "question": "What can Hotkeys be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "detecting ", 
+            "actual_answer": "detecting ", 
+            "question": "What can Arrays be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "identifying dead cells", 
+            "actual_answer": "identifying dead cells", 
+            "question": "What can PI be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "monitoring access control authorizations system configurations business process settings", 
+            "actual_answer": "monitoring access control authorizations system configurations business process settings", 
+            "question": "What can I use CCM for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "optimizing the machining process", 
+            "actual_answer": "optimizing the machining process", 
+            "question": "What can I use machine-tool dynamometers for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "stripping", 
+            "actual_answer": "stripping", 
+            "question": "What can superheated steam be used for ?", 
+            "actual_relation": "purpose"
+        }, 
+        {
+            "answer": "measuring ultra short pulse width", 
+            "actual_answer": "measuring ultra short pulse width", 
+            "question": "What can I use Second harmonic generation for ?", 
+            "actual_relation": "purpose"
+        }, 
+        20
+    ], 
+    "activity": [
+        {
+            "answer": "dig", 
+            "actual_answer": "dig", 
+            "question": "What can echidna do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "swim", 
+            "actual_answer": "swim", 
+            "question": "What is common loon able to?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": " Bala can return ", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "what can Bala do ?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "participate in exhibitions", 
+            "actual_answer": "participate in exhibitions", 
+            "question": "What do teams is able to do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "relies on nuclear power", 
+            "actual_answer": "relies on nuclear power", 
+            "question": "What do France is able to do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": " Laozhong can use a grenade ", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "what can Laozhong do ?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": " Marty can convince Doc ", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "what is Marty able to do ?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "kill him", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What can do kill him?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "distinguish them", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What can do distinguish them?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "hunt", 
+            "actual_answer": "hunt", 
+            "question": "What can grey mouse lemur do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "jump", 
+            "actual_answer": "hop", 
+            "question": "What can hare do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "remember", 
+            "actual_answer": "remember", 
+            "question": "What can chimpanzee do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "hunt", 
+            "actual_answer": "hunt", 
+            "question": "What is mountain lion able to?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "hunt", 
+            "actual_answer": "hunt", 
+            "question": "What is edible frog able to?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": " VST can obtain a high angular resolution ", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "what is VST able to do ?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "played in 2014 Winter Olympics", 
+            "actual_answer": "played in 2014 Winter Olympics", 
+            "question": "What is an activity Lindfors do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "run", 
+            "actual_answer": "run", 
+            "question": "What is ocelot able to?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "focus on course", 
+            "actual_answer": "participate in Exchange program", 
+            "question": "What do students is able to do?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "verify", 
+            "actual_answer": "verify", 
+            "question": "What is able to do Edhance?", 
+            "actual_relation": "activity"
+        }, 
+        {
+            "answer": "drive off", 
+            "actual_answer": "drive off", 
+            "question": "What can do Scud?", 
+            "actual_relation": "activity"
+        }, 
+        12
+    ], 
+    "how_to_use": [
+        {
+            "answer": "Team Lotus", 
+            "actual_answer": "Team Lotus", 
+            "question": "What is the best way to use Formula One car?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "read", 
+            "actual_answer": "to do", 
+            "question": "How do you use a book?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "observed", 
+            "actual_answer": "observed", 
+            "question": "Which is the correct way to use ahimsa?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "Austria-Hungary", 
+            "actual_answer": "Austria-Hungary", 
+            "question": "What is the best way to use field gun?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "Jaguar Racing", 
+            "actual_answer": "Jaguar Racing", 
+            "question": "How to use racing car?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "sit", 
+            "actual_answer": "to do", 
+            "question": "How do you use a chair?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "fire", 
+            "actual_answer": "to do", 
+            "question": "How do you use a rocket?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "pushed", 
+            "actual_answer": "pushed", 
+            "question": "How is supposed to be used Khorasan wheat?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "drive", 
+            "actual_answer": "to do", 
+            "question": "What do you do with car?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "drink", 
+            "actual_answer": "to do", 
+            "question": "How do you use a wine?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "to do", 
+            "actual_answer": "to do", 
+            "question": "What can you use to do?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "admitted", 
+            "actual_answer": "to do", 
+            "question": "How would you use Air?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "drink", 
+            "actual_answer": "to do", 
+            "question": "How do you use a wine?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "Canadian", 
+            "actual_answer": "Canadian", 
+            "question": "How to use pseudonym?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "play", 
+            "actual_answer": "to do", 
+            "question": "How do you use a piano?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "process", 
+            "actual_answer": "process", 
+            "question": "How to use scheduling algorithm?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "stone sculptors", 
+            "actual_answer": "stone sculptors", 
+            "question": "What is the best way to use measuring tool?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "calculated", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "How is supposed to be used turnout?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "zip", 
+            "actual_answer": "to do", 
+            "question": "How do you use a zipper?", 
+            "actual_relation": "how_to_use"
+        }, 
+        {
+            "answer": "Scottish", 
+            "actual_answer": "Scottish", 
+            "question": "What is the best way to use forms of address?", 
+            "actual_relation": "how_to_use"
+        }, 
+        10
+    ], 
+    "smell": [
+        {
+            "answer": "new", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What does life smell like?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "soap", 
+            "actual_answer": "soap", 
+            "question": "What does smell like Success?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "maraschino cherries", 
+            "actual_answer": "maraschino cherries", 
+            "question": "What does smell like Methoxymethylfurfural?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "stock cubes", 
+            "actual_answer": "stock cubes", 
+            "question": "What does smell like Dysphania botrys?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "peaches", 
+            "actual_answer": "peaches", 
+            "question": "What does smell like Neoparrya lithophila?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "cinnamon", 
+            "actual_answer": "cinnamon", 
+            "question": "What does smell like Ethyl cinnamate?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "pineapple", 
+            "actual_answer": "pineapple", 
+            "question": "What does smell like Ethyl butyrate?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "acetic acid", 
+            "actual_answer": "butter", 
+            "question": "What does smell like It?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "curry", 
+            "actual_answer": "curry", 
+            "question": "What does smell like Everlasting?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "vinegar", 
+            "actual_answer": "vinegar", 
+            "question": "What does smell like Trifluoroacetic acid?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "barbecue", 
+            "actual_answer": "barbecue", 
+            "question": "What does smell like Canal Livre?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "cross", 
+            "actual_answer": "cross", 
+            "question": "What does smell like Calamint?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "jasmine", 
+            "actual_answer": "jasmine", 
+            "question": "What does smell like Methyl dihydrojasmonate?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "decaying meat", 
+            "actual_answer": "decaying meat", 
+            "question": "What does smell like Carrion flowers?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "resin", 
+            "actual_answer": "resin", 
+            "question": "What does smell like Pistacia lentiscus?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "fresh", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What does fish smell like?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "honey", 
+            "actual_answer": "honey", 
+            "question": "What does smell like Methyl phenylacetate?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "marvelous", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What does lawn smell like?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "bleaching powder", 
+            "actual_answer": "bleaching powder", 
+            "question": "What does smell like Amanita atkinsoniana?", 
+            "actual_relation": "smell"
+        }, 
+        {
+            "answer": "diethyl ether", 
+            "actual_answer": "diethyl ether", 
+            "question": "What does smell like 1,4-Dioxane?", 
+            "actual_relation": "smell"
+        }, 
+        16
+    ], 
+    "time": [
+        {
+            "answer": "October 1666", 
+            "actual_answer": "October 1666", 
+            "question": "When land was originally conveyed  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1930", 
+            "actual_answer": "1930", 
+            "question": "When Glacier Basin Campground Ranger Station was built  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "March", 
+            "actual_answer": "March 2009", 
+            "question": "When do WeoGeo released Library  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1966", 
+            "actual_answer": "1966", 
+            "question": "When Sherwin Miller Museum was founded  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1040", 
+            "actual_answer": "1040", 
+            "question": "When Oberwil-Lieli is first mentioned  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1994", 
+            "actual_answer": "December 1887", 
+            "question": "When it was considered school As  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "November 17 2010", 
+            "actual_answer": "November 17 2010", 
+            "question": "When do incoming Speaker announced  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "2006", 
+            "actual_answer": "1935", 
+            "question": "When It was written  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1402", 
+            "actual_answer": "1363", 
+            "question": "When village was mentioned  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "October 16 1990", 
+            "actual_answer": "April 16 1993", 
+            "question": "When It was discovered  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "2004", 
+            "actual_answer": "2004", 
+            "question": "When do He joined side Troms\u00f8  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "mid-November", 
+            "actual_answer": "mid-November", 
+            "question": "When it is usually held  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1990", 
+            "actual_answer": "1990", 
+            "question": "When album was rereleased Nutcracker  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1970", 
+            "actual_answer": "1970", 
+            "question": "When do He been fellow  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1778", 
+            "actual_answer": "1778", 
+            "question": "When Houdon was admitted  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "September 15 2009", 
+            "actual_answer": "September 15 2009", 
+            "question": "When Tolling is governed at_time ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "April 2010", 
+            "actual_answer": "April 2010", 
+            "question": "When station was opened Peixauet at_time ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1935", 
+            "actual_answer": "1935", 
+            "question": "When do Moses Wolf Goldberg earned Habilitation degree  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "20th century", 
+            "actual_answer": "20th century", 
+            "question": "When do Allinge-Sandvig grew considerably  ?", 
+            "actual_relation": "time"
+        }, 
+        {
+            "answer": "1912", 
+            "actual_answer": "1912", 
+            "question": "When do weekly newspaper by name of `` Herut '' became  ?", 
+            "actual_relation": "time"
+        }, 
+        15
+    ], 
+    "size": [
+        {
+            "answer": "small", 
+            "actual_answer": "small", 
+            "question": "How big is Bajja ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "tiny.", 
+            "actual_answer": "small", 
+            "question": "What is the size of Gaza minority ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "large", 
+            "actual_answer": "large", 
+            "question": "What is size of Vasorum ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "small", 
+            "actual_answer": "small", 
+            "question": "What is size of Dykebar ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "vast.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the size of Megaship cruise ship ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "small", 
+            "actual_answer": "small", 
+            "question": "How big is battle ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "large", 
+            "actual_answer": "large", 
+            "question": "How big is Fiat 1300 ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "small", 
+            "actual_answer": "small", 
+            "question": "How big is Valfortore ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "short", 
+            "actual_answer": "short", 
+            "question": "what size is 1947?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "large", 
+            "actual_answer": "large", 
+            "question": "What is size of shell ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "lean.", 
+            "actual_answer": "small", 
+            "question": "What is the size of MVV system ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "short.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the size of Martin Weston ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "lanky.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the size of Leonard ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "high", 
+            "actual_answer": "small", 
+            "question": "What is size of Academy ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "enormous.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the size of Baudelaire fortune ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "small", 
+            "actual_answer": "small", 
+            "question": "How big is Pongau ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "high", 
+            "actual_answer": "high", 
+            "question": "What is size of piler ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "immense.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the size of Beyonder power ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "giant.", 
+            "actual_answer": "I do not know the answer !", 
+            "question": "What is the size of Morrison allosaur ?", 
+            "actual_relation": "size"
+        }, 
+        {
+            "answer": "big", 
+            "actual_answer": "short", 
+            "question": "How big is It ?", 
+            "actual_relation": "size"
+        }, 
+        10
+    ]
+}
