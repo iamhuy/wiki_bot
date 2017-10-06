@@ -5,7 +5,7 @@ A simple Telegram chatbot using knowledge base which had been crowdsourced from 
 ## How to use
 First, connect to  [Chatbot](http://t.me/nlpproject_bot)
 
-Because server might be suspended when there is no incoming request for a period time, the first message will be delayed about 30 seconds for resuming the server again.
+Because server might be suspended when there is no incoming request for a period time, the first response will be delayed about 1 minute for resuming the server again.
 
 A conversation with chatbot includes 4 steps:
 * Step 1: Chatbot will ask a specific domain
@@ -161,7 +161,7 @@ A conversation with chatbot includes 4 steps:
 
 ### Note
 
-Because of large size, pretrained model for relation detection and local database were not kept in github repo but google drive for references: 
+Because of large size, pretrained model for relation detection and local database were not kept in github repo but google drive for references: https://goo.gl/jnAmtw
 
 ## Authors
 
