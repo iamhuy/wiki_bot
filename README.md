@@ -106,103 +106,65 @@ A conversation with chatbot includes 4 steps:
     What is the size of Preludes ?
     ```
     
-    Jormal normal questions will be asked. 
-		Users then have to answer the question.
+	Jormal normal questions will be asked. 
+	
+	Users then have to answer the question.
+	
+	```
+	Big
+	```
+	
+	or if Users don't have any answer
+	
+	```
+	No
+	```
     
     
 * Step 4: Chatbot will tell users to end conversation
     
-    If users give an answer
+	If users give an answer
 
-    ```
-    I got your answer ! Thank you !
-    ```
+	```
+	I got your answer ! Thank you !
+	```
+	
+	Or if users don't have any answer
+	
+	```
+	Don't worry ! You will can answer it next time.
+	```
     
-    Or if users don't have any answer
-
-    ```
-    Don't worry ! You will can answer it next time.
-    ```
+	Conversation ends. 
+	
+	User can start a new session of conversation by typing anything.
     
-    Conversation ends. 
-    User can start a new session of conversation by typing anything.
-    
-### Prerequisites
+### Conversation example
 
-What things you need to install the software and how to install them
+	- Hello !
 
-```
-Give examples
-```
+	+ Hello, what would you like to talk about ?
 
-### Installing
+	- Computing
 
-A step by step series of examples that tell you have to get a development env running
+	+ Would you like to ask a question ?
 
-Say what the step will be
+	- no
 
-```
-Give the example
-```
+	+ What is the group of Motorola EM28/EM330 ?
 
-And repeat
+	- Mobile device
 
-```
-until finished
-```
+	+ Thank you ! I got your answer !
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
 
-Explain how to run the automated tests for this system
+### Note
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Because of large size, pretrained model for relation detection and local database were not kept in github repo but google drive for references: 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+**Nguyen Minh Gia Huy** - Sapienza University of Rome
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+Natural Language Processing Course.
