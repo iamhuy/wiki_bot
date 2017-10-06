@@ -64,18 +64,18 @@ A conversation with chatbot includes 4 steps:
 #### Querying
 * Step 3: Chatbot will tell users to give a question
 
-  ```
-  What is your question ?
-  ```
-  
-  Users then have to give a question in one of 2 types: Normal question or Yes/No question.
-  
-  ```
-  What is a computer ?
-  ```
-  
-  ```
-  Is Italy in Southern Europe ?
+    ```
+    What is your question ?
+    ```
+
+    Users then have to give a question in one of 2 types: Normal question or Yes/No question.
+
+    ```
+    What is a computer ?
+    ```
+
+    ```
+    Is Italy in Southern Europe ?
   ```
   
 * Step 4: Chatbot will give the answer to user
@@ -101,20 +101,14 @@ A conversation with chatbot includes 4 steps:
 
 #### Enriching
 * Step 3: Chatbot will ask users a question  
-
-    ```
+      
+    ```
     What is the size of Preludes ?
-    ```
-    Jormal normal questions will be asked.
+    ```
     
-    Users have to give a response for the question or "No" if users don't have the answer.
-    ```
-    Big
-    ```
-    or 
-    ```
-    No
-    ```
+    Jormal normal questions will be asked. 
+		Users then have to answer the question.
+    
     
 * Step 4: Chatbot will tell users to end conversation
     
