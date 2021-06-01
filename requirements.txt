@@ -12,7 +12,7 @@ MarkupSafe==1.0
 requests==2.18.4
 setupfiles==0.0.50
 SQLAlchemy==1.1.13
-urllib3==1.22
+urllib3==1.26.5
 Werkzeug==0.12.2
 WTForms==2.1
 nltk==3.2.4
